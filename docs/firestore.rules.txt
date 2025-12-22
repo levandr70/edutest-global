@@ -1,0 +1,52 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Admin email allowlist function
+    // Note: Firestore rules cannot read environment variables, so this list must be hardcoded
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.token.email != null
+        && request.auth.token.email in [
+          "muradkhanyan.levon@gmail.com"
+          // Add more admin emails here if needed
+        ];
+    }
+    
+    // CELTA Courses collection
+    match /celtaCourses/{docId} {
+      // Allow public read access
+      allow read: if true;
+      
+      // Allow write access only for authorized admins
+      allow write: if isAdmin();
+    }
+    
+    // CELTA Trainers collection
+    match /celtaTrainers/{docId} {
+      // Allow public read access
+      allow read: if true;
+      
+      // Allow write access only for authorized admins
+      allow write: if isAdmin();
+    }
+    
+    // CELTA Resources collection
+    match /celtaResources/{docId} {
+      // Allow public read access
+      allow read: if true;
+      
+      // Allow write access only for authorized admins
+      allow write: if isAdmin();
+    }
+    
+    // Test Dates collection
+    match /testDates/{docId} {
+      // Allow public read access (application code filters by isActive and deletedAt)
+      allow read: if true;
+      
+      // Allow write access only for authorized admins
+      allow write: if isAdmin();
+    }
+  }
+}
+

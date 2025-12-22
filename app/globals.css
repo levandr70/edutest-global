@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-neutral-800 antialiased;
+    line-height: 1.6;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-semibold tracking-tight;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+}
+
+/* FullCalendar Styles for TOEFL Dates Calendar */
+.toefl-calendar-wrapper {
+  @apply bg-white border border-neutral-200 rounded-lg p-4 md:p-6;
+}
+
+.toefl-calendar-wrapper .fc {
+  @apply text-sm;
+}
+
+/* Compact calendar - reduce font sizes and cell heights */
+.toefl-calendar-wrapper .fc-header-toolbar {
+  @apply mb-4;
+}
+
+.toefl-calendar-wrapper .fc-toolbar-title {
+  @apply text-lg font-semibold text-gray-900;
+}
+
+.toefl-calendar-wrapper .fc-button {
+  @apply px-3 py-1.5 text-sm text-gray-700 bg-white border border-neutral-300 rounded-lg hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2;
+}
+
+.toefl-calendar-wrapper .fc-button:active {
+  @apply bg-neutral-100;
+}
+
+.toefl-calendar-wrapper .fc-button-primary:not(:disabled):active,
+.toefl-calendar-wrapper .fc-button-primary:not(:disabled).fc-button-active {
+  @apply bg-neutral-100 border-neutral-300;
+}
+
+/* Day headers - compact */
+.toefl-calendar-wrapper .fc-col-header-cell {
+  @apply py-2 border-b border-neutral-200;
+}
+
+.toefl-calendar-wrapper .fc-col-header-cell-cushion {
+  @apply text-xs font-semibold text-gray-700 py-1;
+}
+
+/* Calendar cells - compact and remove blue borders */
+.toefl-calendar-wrapper .fc-daygrid-day {
+  @apply border border-neutral-200;
+}
+
+.toefl-calendar-wrapper .fc-daygrid-day-frame {
+  @apply min-h-[3.5rem];
+}
+
+.toefl-calendar-wrapper .fc-daygrid-day-number {
+  @apply text-sm font-medium text-gray-700 p-1;
+}
+
+/* Remove blue borders, outlines, and focus rings from empty day cells */
+.toefl-calendar-wrapper .fc-daygrid-day:not(.fc-day-disabled) {
+  @apply focus:outline-none;
+}
+
+.toefl-calendar-wrapper .fc-daygrid-day:not(.fc-day-disabled) a {
+  @apply focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0;
+}
+
+.toefl-calendar-wrapper .fc-daygrid-day:not(.fc-day-disabled):focus,
+.toefl-calendar-wrapper .fc-daygrid-day:not(.fc-day-disabled):focus-within {
+  @apply outline-none ring-0;
+}
+
+.toefl-calendar-wrapper .fc-daygrid-day:not(.fc-day-disabled) a:focus,
+.toefl-calendar-wrapper .fc-daygrid-day:not(.fc-day-disabled) a:focus-visible,
+.toefl-calendar-wrapper .fc-daygrid-day:not(.fc-day-disabled) a:active {
+  @apply outline-none ring-0 shadow-none;
+}
+
+/* Remove default blue link styling */
+.toefl-calendar-wrapper .fc-daygrid-day-number {
+  @apply text-gray-700 no-underline;
+}
+
+.toefl-calendar-wrapper .fc-daygrid-day-number:hover {
+  @apply text-gray-900;
+}
+
+/* Highlighted announced dates - blue background with white text and icon */
+.toefl-calendar-wrapper .fc-daygrid-day.announced-date {
+  @apply bg-primary-600 border-primary-700;
+  position: relative;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}
+
+.toefl-calendar-wrapper .fc-daygrid-day.announced-date .fc-daygrid-day-number {
+  @apply text-white font-semibold;
+  position: relative;
+  z-index: 1;
+}
+
+/* Today indicator - bigger and bold */
+.toefl-calendar-wrapper .fc-day-today {
+  @apply bg-neutral-50;
+}
+
+.toefl-calendar-wrapper .fc-day-today .fc-daygrid-day-number {
+  @apply text-base font-bold text-primary-700;
+}
+
+.toefl-calendar-wrapper .fc-day-today.announced-date {
+  @apply bg-primary-700 border-primary-800;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}
+
+.toefl-calendar-wrapper .fc-day-today.announced-date .fc-daygrid-day-number {
+  @apply text-base font-bold text-white;
+  position: relative;
+  z-index: 1;
+}
+
+/* Event background styling */
+.toefl-calendar-wrapper .fc-event {
+  @apply border-0;
+}
+
+.toefl-calendar-wrapper .fc-event.announced-date {
+  @apply bg-primary-200/50;
+}
+
+/* Remove hover effects on empty cells */
+.toefl-calendar-wrapper .fc-daygrid-day:not(.announced-date):hover {
+  @apply bg-white;
+}
+
+.toefl-calendar-wrapper .fc-daygrid-day:not(.announced-date) .fc-daygrid-day-number:hover {
+  @apply text-gray-700;
+}
+
+/* Compact spacing */
+.toefl-calendar-wrapper .fc-scrollgrid {
+  @apply border-neutral-200;
+}
+
+.toefl-calendar-wrapper .fc-scrollgrid-section > table {
+  @apply border-collapse;
+}
+
+.toefl-calendar-wrapper .fc-scrollgrid-sync-table {
+  @apply border-spacing-0;
+}
+
+/* Hide past dates */
+.toefl-calendar-wrapper .fc-daygrid-day.fc-day-past {
+  @apply opacity-50;
+}
+
+.toefl-calendar-wrapper .fc-daygrid-day.fc-day-past .fc-daygrid-day-number {
+  @apply text-gray-400;
+}
