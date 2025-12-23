@@ -35,19 +35,23 @@ The 404 error usually means the build failed or environment variables are missin
 1. Go to: **Project Settings** → **Environment Variables**
 2. Add all 10 variables (see `VERCEL_ENV_QUICK_ADD.md` for exact values)
 
-**Quick list:**
+**Quick list (use your actual values from Firebase Console and Cloudflare):**
 ```
-NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyAkJaV4OArITN4_g6YUZPbcCMXxcwD8Bh4
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=edutest-global.firebaseapp.com
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=edutest-global
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=edutest-global.firebasestorage.app
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=1833963372
-NEXT_PUBLIC_FIREBASE_APP_ID=1:1833963372:web:52a2f650ba7db6c9f46d49
-NEXT_PUBLIC_ADMIN_EMAILS=muradkhanyan.levon@gmail.com,admin2@example.com
-NEXT_PUBLIC_TURNSTILE_SITE_KEY=0x4AAAAAACHJqtWXAret01gb
-TURNSTILE_SECRET_KEY=0x4AAAAAACHJqkRwaGpYWPGv1eV-rjAqzbg
-NEXT_PUBLIC_SITE_URL=https://edutest-global-xllr.vercel.app
+NEXT_PUBLIC_FIREBASE_API_KEY=[Your Firebase API Key]
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=[Your Firebase Auth Domain]
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=[Your Firebase Project ID]
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=[Your Firebase Storage Bucket]
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=[Your Firebase Messaging Sender ID]
+NEXT_PUBLIC_FIREBASE_APP_ID=[Your Firebase App ID]
+NEXT_PUBLIC_ADMIN_EMAILS=[Your admin email(s)]
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=[Your Turnstile Site Key]
+TURNSTILE_SECRET_KEY=[Your Turnstile Secret Key]
+NEXT_PUBLIC_SITE_URL=https://your-project.vercel.app
 ```
+
+**⚠️ IMPORTANT:** Replace `[Your ...]` with actual values from:
+- Firebase Console → Project Settings → Your apps
+- Cloudflare Dashboard → Turnstile
 
 **Important:**
 - Select **✅ Production** AND **✅ Preview** for each variable

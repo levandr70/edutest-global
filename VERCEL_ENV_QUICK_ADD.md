@@ -20,65 +20,66 @@
 ### 1. Firebase API Key
 ```
 Key: NEXT_PUBLIC_FIREBASE_API_KEY
-Value: AIzaSyAkJaV4OArITN4_g6YUZPbcCMXxcwD8Bh4
+Value: [Your Firebase API Key - Get from Firebase Console]
 Environments: Production ✅ Preview ✅
 ```
 
 ### 2. Firebase Auth Domain
 ```
 Key: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
-Value: edutest-global.firebaseapp.com
+Value: [Your Firebase Auth Domain - e.g., your-project.firebaseapp.com]
 Environments: Production ✅ Preview ✅
 ```
 
 ### 3. Firebase Project ID
 ```
 Key: NEXT_PUBLIC_FIREBASE_PROJECT_ID
-Value: edutest-global
+Value: [Your Firebase Project ID]
 Environments: Production ✅ Preview ✅
 ```
 
 ### 4. Firebase Storage Bucket
 ```
 Key: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
-Value: edutest-global.firebasestorage.app
+Value: [Your Firebase Storage Bucket - e.g., your-project.appspot.com]
 Environments: Production ✅ Preview ✅
 ```
 
 ### 5. Firebase Messaging Sender ID
 ```
 Key: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
-Value: 1833963372
+Value: [Your Firebase Messaging Sender ID - numeric]
 Environments: Production ✅ Preview ✅
 ```
 
 ### 6. Firebase App ID
 ```
 Key: NEXT_PUBLIC_FIREBASE_APP_ID
-Value: 1:1833963372:web:52a2f650ba7db6c9f46d49
+Value: [Your Firebase App ID - format: 1:123456789012:web:abc123]
 Environments: Production ✅ Preview ✅
 ```
 
 ### 7. Admin Emails
 ```
 Key: NEXT_PUBLIC_ADMIN_EMAILS
-Value: muradkhanyan.levon@gmail.com,admin2@example.com
+Value: [Your admin email(s) - comma-separated, no spaces]
 Environments: Production ✅ Preview ✅
 ```
 
 ### 8. Turnstile Site Key
 ```
 Key: NEXT_PUBLIC_TURNSTILE_SITE_KEY
-Value: 0x4AAAAAACHJqtWXAret01gb
+Value: [Your Turnstile Site Key - Get from Cloudflare Dashboard]
 Environments: Production ✅ Preview ✅
 ```
 
 ### 9. Turnstile Secret Key ⚠️ IMPORTANT
 ```
 Key: TURNSTILE_SECRET_KEY
-Value: 0x4AAAAAACHJqkRwaGpYWPGv1eV-rjAqzbg
+Value: [Your Turnstile Secret Key - Get from Cloudflare Dashboard]
 Environments: Production ✅ Preview ✅
 ⚠️ DO NOT add NEXT_PUBLIC_ prefix to this one!
+⚠️ KEEP THIS SECRET - Never commit to Git!
 ```
 
 ### 10. Site URL
