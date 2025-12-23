@@ -3,6 +3,8 @@ import Container from "@/components/Container";
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import Link from "next/link";
+import ScrollAnimation from "@/components/ScrollAnimation";
+import StaggerAnimation from "@/components/StaggerAnimation";
 
 export const metadata: Metadata = {
   title: "EduTest Global | International Testing Center in Yerevan",
@@ -86,34 +88,42 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white py-20 md:py-32 relative overflow-hidden">
         <Container>
-          <div className="text-center max-w-4xl mx-auto relative z-10">
-            <div className="inline-block mb-4">
+          <ScrollAnimation direction="fade" duration={0.8} className="text-center max-w-4xl mx-auto relative z-10">
+            <ScrollAnimation direction="down" delay={0.2} className="inline-block mb-4">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-semibold bg-white/20 backdrop-blur-sm border border-white/30">
                 International Testing Center • Yerevan
               </span>
-            </div>
-            <h1 className="mb-6 text-white">
-              Official International Exams in Yerevan
-            </h1>
-            <p className="text-xl md:text-2xl mb-4 text-primary-100 max-w-2xl mx-auto">
-              Authorized testing center for official international exams. Secure, professional administration in a comfortable testing environment.
-            </p>
-            <p className="text-sm md:text-base mb-10 text-primary-200 max-w-2xl mx-auto">
-              67/1 Baghramyan Ave • Open 10:00–18:00
-            </p>
-            <div className="flex justify-center">
-              <Button href="/contact" variant="secondary">
-                Contact Us
-              </Button>
-            </div>
-          </div>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.3}>
+              <h1 className="mb-6 text-white">
+                Official International Exams in Yerevan
+              </h1>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.4}>
+              <p className="text-xl md:text-2xl mb-4 text-primary-100 max-w-2xl mx-auto">
+                Authorized testing center for official international exams. Secure, professional administration in a comfortable testing environment.
+              </p>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.5}>
+              <p className="text-sm md:text-base mb-10 text-primary-200 max-w-2xl mx-auto">
+                67/1 Baghramyan Ave • Open 10:00–18:00
+              </p>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.6}>
+              <div className="flex justify-center">
+                <Button href="/contact" variant="secondary">
+                  Contact Us
+                </Button>
+              </div>
+            </ScrollAnimation>
+          </ScrollAnimation>
         </Container>
       </section>
 
       {/* Trust Bar */}
       <section className="py-8 bg-neutral-50 border-b border-neutral-200">
         <Container>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <StaggerAnimation className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8" staggerDelay={0.1}>
             {trustBar.map((item, index) => (
               <div
                 key={index}
@@ -144,15 +154,17 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
+          </StaggerAnimation>
         </Container>
       </section>
 
       {/* Official Exams Section */}
       <section className="py-16 md:py-24 bg-neutral-50">
         <Container>
-          <SectionHeading>Official Exams</SectionHeading>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
+          <ScrollAnimation direction="up" delay={0.2}>
+            <SectionHeading>Official Exams</SectionHeading>
+          </ScrollAnimation>
+          <StaggerAnimation className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8" staggerDelay={0.1}>
             {examCards.map((exam) => (
               <div
                 key={exam.name}
@@ -182,44 +194,46 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
+          </StaggerAnimation>
           
           {/* Announced Dates Quick Access */}
-          <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
-            <Link
-              href="/testing/toefl"
-              className="px-4 py-2 text-sm font-medium text-neutral-700 bg-white hover:bg-neutral-50 rounded-lg border border-neutral-200 hover:border-primary transition-colors"
-            >
-              TOEFL Dates
-            </Link>
-            <Link
-              href="/testing/gre"
-              className="px-4 py-2 text-sm font-medium text-neutral-700 bg-white hover:bg-neutral-50 rounded-lg border border-neutral-200 hover:border-primary transition-colors"
-            >
-              GRE Dates
-            </Link>
-            <Link
-              href="/testing/act"
-              className="px-4 py-2 text-sm font-medium text-neutral-700 bg-white hover:bg-neutral-50 rounded-lg border border-neutral-200 hover:border-primary transition-colors"
-            >
-              ACT Dates
-            </Link>
-          </div>
+          <ScrollAnimation direction="up" delay={0.3}>
+            <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
+              <Link
+                href="/testing/toefl"
+                className="px-4 py-2 text-sm font-medium text-neutral-700 bg-white hover:bg-neutral-50 rounded-lg border border-neutral-200 hover:border-primary transition-colors"
+              >
+                TOEFL Dates
+              </Link>
+              <Link
+                href="/testing/gre"
+                className="px-4 py-2 text-sm font-medium text-neutral-700 bg-white hover:bg-neutral-50 rounded-lg border border-neutral-200 hover:border-primary transition-colors"
+              >
+                GRE Dates
+              </Link>
+              <Link
+                href="/testing/act"
+                className="px-4 py-2 text-sm font-medium text-neutral-700 bg-white hover:bg-neutral-50 rounded-lg border border-neutral-200 hover:border-primary transition-colors"
+              >
+                ACT Dates
+              </Link>
+            </div>
+          </ScrollAnimation>
         </Container>
       </section>
 
       {/* Professional Testing Partners Section */}
       <section className="py-16 md:py-24 bg-neutral-50 border-t border-neutral-200">
         <Container>
-          <div className="text-center mb-8">
+          <ScrollAnimation direction="up" className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-neutral-900">
               Professional Testing Partners
             </h2>
             <p className="text-sm text-neutral-600 max-w-2xl mx-auto">
               We deliver computer-based assessments on behalf of leading international testing providers.
             </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
+          </ScrollAnimation>
+          <StaggerAnimation className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto" staggerDelay={0.1}>
             {testingPartners.map((partner) => (
               <Link
                 key={partner.name}
@@ -229,23 +243,29 @@ export default function Home() {
                 {partner.name}
               </Link>
             ))}
-          </div>
-          <div className="flex justify-center mb-6">
-            <Button href="/testing" variant="primary">
-              Explore Professional Tests
-            </Button>
-          </div>
-          <p className="text-xs text-neutral-500 text-center max-w-3xl mx-auto">
-            Exam availability, scheduling, and registration processes are determined by each testing provider.
-          </p>
+          </StaggerAnimation>
+          <ScrollAnimation direction="up" delay={0.2}>
+            <div className="flex justify-center mb-6">
+              <Button href="/testing" variant="primary">
+                Explore Professional Tests
+              </Button>
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation direction="fade" delay={0.3}>
+            <p className="text-xs text-neutral-500 text-center max-w-3xl mx-auto">
+              Exam availability, scheduling, and registration processes are determined by each testing provider.
+            </p>
+          </ScrollAnimation>
         </Container>
       </section>
 
       {/* Why Choose Us Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-neutral-50 to-white">
         <Container>
-          <SectionHeading>Why Choose Us</SectionHeading>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <ScrollAnimation direction="up" delay={0.2}>
+            <SectionHeading>Why Choose Us</SectionHeading>
+          </ScrollAnimation>
+          <StaggerAnimation className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto" staggerDelay={0.15}>
             {whyChooseUs.map((item) => (
               <div
                 key={item.title}
@@ -274,31 +294,37 @@ export default function Home() {
                 </p>
               </div>
             ))}
-          </div>
+          </StaggerAnimation>
         </Container>
       </section>
 
       {/* Contact CTA Section */}
       <section className="py-12 md:py-16 bg-primary text-white">
         <Container>
-          <div className="max-w-4xl mx-auto text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
-            <h2 className="mb-4 text-white">Ready to Get Started?</h2>
-            <p className="text-lg md:text-xl mb-8 text-primary-100 max-w-2xl mx-auto">
-              Contact us today to learn more about our testing services and
-              certification programs. Our team is here to help you succeed.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contact" variant="secondary">
-                Get in Touch
-              </Button>
-              <a
-                href="tel:+37460509709"
-                className="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold rounded-lg transition-all duration-300 bg-neutral-700 text-white hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-500 focus:ring-offset-white shadow-sm hover:shadow-md active:scale-[0.98]"
-              >
-                Call
-              </a>
-            </div>
-          </div>
+          <ScrollAnimation direction="up" duration={0.8} className="max-w-4xl mx-auto text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
+            <ScrollAnimation direction="fade" delay={0.2}>
+              <h2 className="mb-4 text-white">Ready to Get Started?</h2>
+            </ScrollAnimation>
+            <ScrollAnimation direction="fade" delay={0.3}>
+              <p className="text-lg md:text-xl mb-8 text-primary-100 max-w-2xl mx-auto">
+                Contact us today to learn more about our testing services and
+                certification programs. Our team is here to help you succeed.
+              </p>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.4}>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button href="/contact" variant="secondary">
+                  Get in Touch
+                </Button>
+                <a
+                  href="tel:+37460509709"
+                  className="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold rounded-lg transition-all duration-300 bg-neutral-700 text-white hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-500 focus:ring-offset-white shadow-sm hover:shadow-md active:scale-[0.98]"
+                >
+                  Call
+                </a>
+              </div>
+            </ScrollAnimation>
+          </ScrollAnimation>
         </Container>
       </section>
     </>

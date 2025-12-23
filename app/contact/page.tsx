@@ -3,6 +3,8 @@ import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
+import ScrollAnimation from "@/components/ScrollAnimation";
+import StaggerAnimation from "@/components/StaggerAnimation";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -15,16 +17,16 @@ export default function ContactPage() {
     <div className="py-12 md:py-20">
       <Container>
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+          <ScrollAnimation direction="up" className="text-center mb-12">
             <h1 className="mb-6">Contact Us</h1>
             <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
               Get in touch with us to learn more about our testing services and
               certification programs.
             </p>
-          </div>
+          </ScrollAnimation>
 
           {/* Contact Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <StaggerAnimation className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12" staggerDelay={0.15}>
             {/* Address Card */}
             <div className="bg-white p-6 rounded-lg shadow-md border border-neutral-200">
               <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mb-4">
@@ -119,10 +121,10 @@ export default function ContactPage() {
               </h2>
               <p className="text-neutral-700 text-lg font-medium">10:00–18:00</p>
             </div>
-          </div>
+          </StaggerAnimation>
 
           {/* Google Map */}
-          <div className="mb-12">
+          <ScrollAnimation direction="up" delay={0.2} className="mb-12">
             <div className="bg-white rounded-lg shadow-md border border-neutral-200 overflow-hidden">
               <iframe
                 src="https://www.google.com/maps?q=67%2F1+Baghramyan+Ave%2C+Yerevan%2C+Armenia&output=embed"
@@ -135,12 +137,14 @@ export default function ContactPage() {
                 className="w-full border-0"
               />
             </div>
-          </div>
+          </ScrollAnimation>
 
           {/* What can we help you with? Section */}
           <div className="mb-12">
-            <SectionHeading>What can we help you with?</SectionHeading>
-            <div className="grid md:grid-cols-2 gap-4 mt-6">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>What can we help you with?</SectionHeading>
+            </ScrollAnimation>
+            <StaggerAnimation className="grid md:grid-cols-2 gap-4 mt-6" staggerDelay={0.1}>
               <Link
                 href="/testing/toefl"
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200 hover:border-primary group"
@@ -196,19 +200,22 @@ export default function ContactPage() {
                   Internationally recognized English language teaching certification
                 </p>
               </Link>
-            </div>
+            </StaggerAnimation>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-lg shadow-md border border-neutral-200">
+          <ScrollAnimation direction="up" delay={0.2}>
+            <div className="bg-white p-8 rounded-lg shadow-md border border-neutral-200">
             <h2 className="text-2xl font-semibold mb-6 text-primary text-center">
               Send Us a Message
             </h2>
             <ContactForm />
-          </div>
+            </div>
+          </ScrollAnimation>
 
           {/* Quick Actions */}
-          <div className="mt-12 bg-neutral-50 p-8 rounded-lg text-center">
+          <ScrollAnimation direction="up" delay={0.3}>
+            <div className="mt-12 bg-neutral-50 p-8 rounded-lg text-center">
             <h2 className="text-2xl font-semibold mb-4">Prefer to Call?</h2>
             <p className="text-neutral-600 mb-6">
               Reach out to us directly via phone for immediate assistance.
@@ -221,7 +228,8 @@ export default function ContactPage() {
                 Call Us
               </a>
             </div>
-          </div>
+            </div>
+          </ScrollAnimation>
         </div>
       </Container>
     </div>

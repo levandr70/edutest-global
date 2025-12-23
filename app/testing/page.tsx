@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import Button from "@/components/Button";
+import ScrollAnimation from "@/components/ScrollAnimation";
+import StaggerAnimation from "@/components/StaggerAnimation";
 
 export const metadata: Metadata = {
   title: "Professional Testing",
@@ -15,17 +17,19 @@ export default function TestingPage() {
       <Container>
         <div className="max-w-4xl mx-auto">
           {/* Page Header */}
-          <div className="text-center mb-16">
+          <ScrollAnimation direction="up" className="text-center mb-16">
             <h1 className="mb-6">Professional Testing</h1>
             <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
               Take global certification and licensure exams at EduTest Global in Yerevan.
             </p>
-          </div>
+          </ScrollAnimation>
 
           {/* Our Testing Partners Section */}
           <section className="mb-16">
-            <SectionHeading>Our Testing Partners</SectionHeading>
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>Our Testing Partners</SectionHeading>
+            </ScrollAnimation>
+            <StaggerAnimation className="grid md:grid-cols-2 gap-6 mb-8" staggerDelay={0.1}>
               {/* Pearson VUE Card */}
               <div className="bg-white border border-neutral-200 rounded-lg p-6">
                 <h3 className="text-xl font-semibold mb-3 text-primary">Pearson VUE</h3>
@@ -145,16 +149,20 @@ export default function TestingPage() {
                   </a>
                 </div>
               </div>
-            </div>
-            <p className="text-sm text-neutral-500 text-center max-w-2xl mx-auto mt-6">
-              Programs and delivery options vary by exam sponsor. Availability depends on provider schedules and seat availability.
-            </p>
+            </StaggerAnimation>
+            <ScrollAnimation direction="fade" delay={0.2}>
+              <p className="text-sm text-neutral-500 text-center max-w-2xl mx-auto mt-6">
+                Programs and delivery options vary by exam sponsor. Availability depends on provider schedules and seat availability.
+              </p>
+            </ScrollAnimation>
           </section>
 
           {/* How Professional Testing Works Section */}
           <section className="mb-16 pt-16 border-t border-neutral-200">
-            <SectionHeading>How Professional Testing Works</SectionHeading>
-            <div className="grid md:grid-cols-2 gap-6 mt-6">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>How Professional Testing Works</SectionHeading>
+            </ScrollAnimation>
+            <StaggerAnimation className="grid md:grid-cols-2 gap-6 mt-6" staggerDelay={0.1}>
               <div className="bg-white border border-neutral-200 rounded-lg p-6">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">
@@ -210,26 +218,33 @@ export default function TestingPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </StaggerAnimation>
           </section>
 
           {/* Before You Come Section */}
           <section className="mb-16 pt-16 border-t border-neutral-200">
-            <SectionHeading>Before You Come</SectionHeading>
-            <div className="bg-white border border-neutral-200 rounded-lg p-6 mt-6">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>Before You Come</SectionHeading>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="bg-white border border-neutral-200 rounded-lg p-6 mt-6">
               <ul className="space-y-3 text-neutral-700 list-disc list-inside ml-4">
                 <li>Bring acceptable ID that matches your registration profile exactly</li>
                 <li>Arrive 30 minutes early unless your confirmation says otherwise</li>
                 <li>Personal items are not allowed in the test room; lockers may be available for storage</li>
                 <li>Rules vary by sponsor/program; follow your confirmation email</li>
               </ul>
-            </div>
+              </div>
+            </ScrollAnimation>
           </section>
 
           {/* Need Help Section */}
           <section className="mb-16 pt-16 border-t border-neutral-200">
-            <SectionHeading>Need Help?</SectionHeading>
-            <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-8 mt-6">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>Need Help?</SectionHeading>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-8 mt-6">
               <p className="text-neutral-700 mb-6">
                 Not sure which partner delivers your exam? Contact us and we'll guide you.
               </p>
@@ -244,13 +259,17 @@ export default function TestingPage() {
                   Contact Us
                 </Button>
               </div>
-            </div>
+              </div>
+            </ScrollAnimation>
           </section>
 
           {/* Location & Contact Section */}
           <section className="mb-16 pt-16 border-t border-neutral-200">
-            <SectionHeading>Location & Contact</SectionHeading>
-            <div className="bg-neutral-50 rounded-lg p-6 border border-neutral-200 mt-6">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>Location & Contact</SectionHeading>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="bg-neutral-50 rounded-lg p-6 border border-neutral-200 mt-6">
               <div className="space-y-4 text-neutral-700">
                 <div>
                   <p className="font-semibold mb-1 text-gray-900">Address</p>
@@ -276,7 +295,8 @@ export default function TestingPage() {
                   </div>
                 </div>
               </div>
-            </div>
+              </div>
+            </ScrollAnimation>
           </section>
         </div>
       </Container>

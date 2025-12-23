@@ -3,6 +3,8 @@ import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import Button from "@/components/Button";
 import TestDatesCalendarWrapper from "@/components/testing/TestDatesCalendarWrapper";
+import ScrollAnimation from "@/components/ScrollAnimation";
+import StaggerAnimation from "@/components/StaggerAnimation";
 
 export const metadata: Metadata = {
   title: "ACT Testing",
@@ -16,28 +18,32 @@ export default function ACTPage() {
       <Container>
         <div className="max-w-4xl mx-auto">
           {/* Page Header */}
-          <div className="text-center mb-12">
+          <ScrollAnimation direction="up" className="text-center mb-12">
             <h1 className="mb-6">ACT Testing</h1>
             <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
               Official ACT testing center in Yerevan, Armenia. Take the American College Testing assessment in a secure, professional environment.
             </p>
-          </div>
+          </ScrollAnimation>
 
           {/* About the ACT® Test Section */}
           <section className="mb-16">
-            <SectionHeading>
-              <div>
-                <div className="text-3xl md:text-4xl font-bold mb-2">About the ACT® Test</div>
-              </div>
-            </SectionHeading>
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>
+                <div>
+                  <div className="text-3xl md:text-4xl font-bold mb-2">About the ACT® Test</div>
+                </div>
+              </SectionHeading>
+            </ScrollAnimation>
             
-            <div className="space-y-6 text-neutral-700 mb-8">
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="space-y-6 text-neutral-700 mb-8">
               <p>
                 The ACT is a standardized test used for college admissions in the United States. It measures what you have learned in high school and assesses your readiness for college-level work through multiple-choice sections and an optional Writing test.
               </p>
-            </div>
+              </div>
+            </ScrollAnimation>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <StaggerAnimation className="grid md:grid-cols-2 gap-6 mb-8" staggerDelay={0.1}>
               {/* Test Structure & Timing Card */}
               <div className="bg-white border border-neutral-200 rounded-lg p-6">
                 <h3 className="text-xl font-semibold mb-4 text-primary">Test Structure & Timing</h3>
@@ -97,10 +103,11 @@ export default function ACTPage() {
                   <p>ACT fees vary by location and options. Additional fees may apply (late registration, standby testing, change fee).</p>
                 </div>
               </div>
-            </div>
+            </StaggerAnimation>
 
             {/* Official ACT Links */}
-            <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-6">
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold mb-4 text-primary">Official ACT Links</h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 <a
@@ -144,28 +151,36 @@ export default function ACTPage() {
                   Test Day
                 </a>
               </div>
-            </div>
+              </div>
+            </ScrollAnimation>
           </section>
 
           {/* Announced ACT Test Dates Section */}
           <section className="mb-16 pt-16 border-t border-neutral-200">
-            <SectionHeading>
-              <div>
-                <div className="text-3xl md:text-4xl font-bold mb-2">Announced ACT Test Dates</div>
-                <div className="text-base md:text-lg font-normal text-neutral-600 mt-2">
-                  Announced sessions at our testing center. Registration is completed through ACT.
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>
+                <div>
+                  <div className="text-3xl md:text-4xl font-bold mb-2">Announced ACT Test Dates</div>
+                  <div className="text-base md:text-lg font-normal text-neutral-600 mt-2">
+                    Announced sessions at our testing center. Registration is completed through ACT.
+                  </div>
                 </div>
+              </SectionHeading>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="max-w-xl mx-auto">
+                <TestDatesCalendarWrapper exam="act" />
               </div>
-            </SectionHeading>
-            <div className="max-w-xl mx-auto">
-              <TestDatesCalendarWrapper exam="act" />
-            </div>
+            </ScrollAnimation>
           </section>
 
           {/* Overview Section */}
           <section className="mb-12">
-            <SectionHeading>Overview</SectionHeading>
-            <div className="space-y-4 text-neutral-700">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>Overview</SectionHeading>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="space-y-4 text-neutral-700">
               <p>
                 The ACT is a standardized test used for college admissions in the United States. It measures what you have learned in high school and assesses your readiness for college-level work.
               </p>
@@ -175,55 +190,73 @@ export default function ACTPage() {
               <p>
                 The ACT is accepted by all four-year colleges and universities in the United States and is widely recognized for undergraduate admissions.
               </p>
-            </div>
+              </div>
+            </ScrollAnimation>
           </section>
 
           {/* Registration Section */}
           <section className="mb-12">
-            <SectionHeading>Registration</SectionHeading>
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>Registration</SectionHeading>
+            </ScrollAnimation>
             <div className="space-y-3 text-neutral-700">
-              <p>To register for the ACT:</p>
-              <ol className="list-decimal list-inside space-y-2 ml-4">
+              <ScrollAnimation direction="up" delay={0.2}>
+                <p>To register for the ACT:</p>
+              </ScrollAnimation>
+              <ScrollAnimation direction="up" delay={0.3}>
+                <ol className="list-decimal list-inside space-y-2 ml-4">
                 <li>Create an account on the official ACT website</li>
                 <li>Select EduTest Global as your testing center</li>
                 <li>Choose your preferred test date and time</li>
                 <li>Indicate if you will take the optional Writing section</li>
                 <li>Complete payment and registration</li>
                 <li>Receive confirmation with test day instructions</li>
-              </ol>
+                </ol>
+              </ScrollAnimation>
             </div>
           </section>
 
           {/* Before You Come Section */}
           <section className="mb-12">
-            <SectionHeading>Before You Come</SectionHeading>
-            <ul className="space-y-3 text-neutral-700 list-disc list-inside ml-4">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>Before You Come</SectionHeading>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <ul className="space-y-3 text-neutral-700 list-disc list-inside ml-4">
               <li>Bring a valid, government-issued photo ID (passport or national ID)</li>
               <li>Arrive at least 30 minutes before your scheduled test time</li>
               <li>Review the ACT test day policies and requirements</li>
               <li>Ensure you know your ACT account login credentials</li>
               <li>Bring an approved calculator if needed for the Mathematics section</li>
               <li>Do not bring personal items; lockers are provided for storage</li>
-            </ul>
+              </ul>
+            </ScrollAnimation>
           </section>
 
           {/* What to Expect on Test Day Section */}
           <section className="mb-12">
-            <SectionHeading>What to Expect on Test Day</SectionHeading>
-            <ul className="space-y-3 text-neutral-700 list-disc list-inside ml-4">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>What to Expect on Test Day</SectionHeading>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <ul className="space-y-3 text-neutral-700 list-disc list-inside ml-4">
               <li>Check-in process with ID verification and photo capture</li>
               <li>Secure testing environment with individual workstations</li>
               <li>Computer-based test administration with breaks between sections (no electronic devices allowed during breaks)</li>
               <li>Professional staff available for assistance throughout the test</li>
               <li>Over 97% of scores are available within 2–4 weeks after the test date, but some may take up to 8 weeks</li>
               <li>You may not handle or access a cell phone or electronic device at any time in the testing room or during break times</li>
-            </ul>
+              </ul>
+            </ScrollAnimation>
           </section>
 
           {/* Location & Contact Section */}
           <section className="bg-neutral-50 p-8 rounded-lg border border-neutral-200">
-            <h2 className="text-2xl font-semibold mb-6 text-primary">Location & Contact</h2>
-            <div className="space-y-4 text-neutral-700">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <h2 className="text-2xl font-semibold mb-6 text-primary">Location & Contact</h2>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="space-y-4 text-neutral-700">
               <div>
                 <p className="font-semibold mb-1">Address:</p>
                 <p>67/1 Baghramyan Ave., Yerevan, Armenia</p>
@@ -252,7 +285,8 @@ export default function ACTPage() {
                   Contact Us
                 </Button>
               </div>
-            </div>
+              </div>
+            </ScrollAnimation>
           </section>
         </div>
       </Container>

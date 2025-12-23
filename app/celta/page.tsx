@@ -5,6 +5,8 @@ import Button from "@/components/Button";
 import UpcomingCourses from "@/components/celta/UpcomingCourses";
 import Trainers from "@/components/celta/Trainers";
 import Accordion from "@/components/Accordion";
+import ScrollAnimation from "@/components/ScrollAnimation";
+import StaggerAnimation from "@/components/StaggerAnimation";
 
 export const metadata: Metadata = {
   title: "Cambridge CELTA in Yerevan | EduTest Global",
@@ -19,29 +21,33 @@ export default function CELTAPage() {
       <Container>
         <div className="max-w-4xl mx-auto">
           {/* Page Header */}
-          <div className="text-center mb-16">
+          <ScrollAnimation direction="up" className="text-center mb-16">
             <h1 className="mb-4">Cambridge CELTA in Yerevan</h1>
             <p className="text-xl text-gray-600">
               Internationally recognized teacher training qualification • 2–3
               intakes per year
             </p>
-          </div>
+          </ScrollAnimation>
 
           {/* Cambridge CELTA: Overview Section */}
           <section className="mb-16">
-            <SectionHeading>
-              <div>
-                <div className="text-3xl md:text-4xl font-bold mb-2">Cambridge CELTA: Overview</div>
-              </div>
-            </SectionHeading>
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>
+                <div>
+                  <div className="text-3xl md:text-4xl font-bold mb-2">Cambridge CELTA: Overview</div>
+                </div>
+              </SectionHeading>
+            </ScrollAnimation>
             
-            <div className="space-y-6 text-neutral-700 mb-8">
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="space-y-6 text-neutral-700 mb-8">
               <p>
                 CELTA (Certificate in Teaching English to Speakers of Other Languages) is a widely recognised English teaching qualification awarded by Cambridge English (Cambridge Assessment English). CELTA courses are delivered by authorised centres on behalf of Cambridge English and include at least 120 hours of contact time with tutors, teaching practice, feedback, and written assignments.
               </p>
-            </div>
+              </div>
+            </ScrollAnimation>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <StaggerAnimation className="grid md:grid-cols-2 gap-6 mb-8" staggerDelay={0.1}>
               {/* Recognition & Careers Card */}
               <div className="bg-white border border-neutral-200 rounded-lg p-6">
                 <h3 className="text-xl font-semibold mb-4 text-primary">Recognition & Careers</h3>
@@ -99,10 +105,11 @@ export default function CELTAPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </StaggerAnimation>
 
             {/* Official Cambridge Links */}
-            <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-6">
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold mb-4 text-primary">Official Cambridge Links</h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 <a
@@ -146,10 +153,12 @@ export default function CELTAPage() {
                   CELTA Syllabus (PDF)
                 </a>
               </div>
-            </div>
+              </div>
+            </ScrollAnimation>
 
             {/* Ready to Apply CTA */}
-            <div className="bg-white border border-neutral-200 rounded-lg p-6 mt-6">
+            <ScrollAnimation direction="up" delay={0.3}>
+              <div className="bg-white border border-neutral-200 rounded-lg p-6 mt-6">
               <h3 className="text-xl font-semibold mb-3 text-primary">Ready to Apply?</h3>
               <p className="text-sm text-neutral-700 mb-4">
                 Request the application pack and pre-interview task. Places are limited and intakes run 2–3 times per year.
@@ -162,7 +171,8 @@ export default function CELTAPage() {
                   View Upcoming Courses
                 </Button>
               </div>
-            </div>
+              </div>
+            </ScrollAnimation>
           </section>
 
           {/* Upcoming Courses Section */}

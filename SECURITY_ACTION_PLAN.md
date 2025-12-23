@@ -9,11 +9,24 @@
    - Select project: `edutest-global`
 
 2. **Regenerate API Key:**
+   
+   **Method 1 (Easiest): Create New Web App**
    - Go to **Project Settings** → **General**
    - Scroll to **"Your apps"** section
-   - Click on your web app
-   - Click **"Regenerate API Key"** (or create new web app)
-   - **Copy the new API key**
+   - Click **"Add app"** (or **"</>"** icon for Web)
+   - Give it a nickname (e.g., "Web App 2")
+   - Click **"Register app"**
+   - **Copy the new `apiKey`** from the config code
+   
+   **Method 2 (Advanced): Google Cloud Console**
+   - Go to [console.cloud.google.com](https://console.cloud.google.com)
+   - Select project: `edutest-global`
+   - Go to **APIs & Services** → **Credentials**
+   - Find your API key (starts with `AIzaSy...`)
+   - Click on it → Click **"Regenerate key"**
+   - **Copy the new API key immediately**
+   
+   **See `FIREBASE_API_KEY_ROTATION_GUIDE.md` for detailed steps!**
 
 3. **Update Everywhere:**
    - [ ] Update in **Vercel** → Settings → Environment Variables → `NEXT_PUBLIC_FIREBASE_API_KEY`

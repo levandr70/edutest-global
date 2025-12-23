@@ -3,6 +3,8 @@ import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import Button from "@/components/Button";
 import TestDatesCalendarWrapper from "@/components/testing/TestDatesCalendarWrapper";
+import ScrollAnimation from "@/components/ScrollAnimation";
+import StaggerAnimation from "@/components/StaggerAnimation";
 
 export const metadata: Metadata = {
   title: "GRE Testing",
@@ -16,28 +18,32 @@ export default function GREPage() {
       <Container>
         <div className="max-w-4xl mx-auto">
           {/* Page Header */}
-          <div className="text-center mb-12">
+          <ScrollAnimation direction="up" className="text-center mb-12">
             <h1 className="mb-6">GRE Testing</h1>
             <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
               Official GRE General Test testing center in Yerevan, Armenia. Take the Graduate Record Examinations in a secure, professional environment.
             </p>
-          </div>
+          </ScrollAnimation>
 
           {/* About the GRE General Test Section */}
           <section className="mb-16">
-            <SectionHeading>
-              <div>
-                <div className="text-3xl md:text-4xl font-bold mb-2">About the GRE® General Test</div>
-              </div>
-            </SectionHeading>
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>
+                <div>
+                  <div className="text-3xl md:text-4xl font-bold mb-2">About the GRE® General Test</div>
+                </div>
+              </SectionHeading>
+            </ScrollAnimation>
             
-            <div className="space-y-6 text-neutral-700 mb-8">
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="space-y-6 text-neutral-700 mb-8">
               <p>
                 The GRE General Test measures skills that are essential for success in graduate and business school programs: Verbal Reasoning, Quantitative Reasoning, and Analytical Writing. The test is designed to assess your readiness for graduate-level academic work.
               </p>
-            </div>
+              </div>
+            </ScrollAnimation>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <StaggerAnimation className="grid md:grid-cols-2 gap-6 mb-8" staggerDelay={0.1}>
               {/* Test Structure & Timing Card */}
               <div className="bg-white border border-neutral-200 rounded-lg p-6">
                 <h3 className="text-xl font-semibold mb-4 text-primary">Test Structure & Timing</h3>
@@ -89,10 +95,11 @@ export default function GREPage() {
                   <p className="text-xs text-neutral-500">Effective July 1, 2024; subject to change</p>
                 </div>
               </div>
-            </div>
+            </StaggerAnimation>
 
             {/* Official ETS Links */}
-            <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-6">
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold mb-4 text-primary">Official ETS Links</h3>
               <div className="grid sm:grid-cols-2 gap-3">
                 <a
@@ -128,81 +135,107 @@ export default function GREPage() {
                   Fees
                 </a>
               </div>
-            </div>
+              </div>
+            </ScrollAnimation>
           </section>
 
           {/* Announced GRE Test Dates Section */}
           <section className="mb-16 pt-16 border-t border-neutral-200">
-            <SectionHeading>
-              <div>
-                <div className="text-3xl md:text-4xl font-bold mb-2">Announced GRE Test Dates</div>
-                <div className="text-base md:text-lg font-normal text-neutral-600 mt-2">
-                  Announced sessions at our testing center. Registration is completed through ETS.
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>
+                <div>
+                  <div className="text-3xl md:text-4xl font-bold mb-2">Announced GRE Test Dates</div>
+                  <div className="text-base md:text-lg font-normal text-neutral-600 mt-2">
+                    Announced sessions at our testing center. Registration is completed through ETS.
+                  </div>
                 </div>
+              </SectionHeading>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="max-w-xl mx-auto">
+                <TestDatesCalendarWrapper exam="gre" />
               </div>
-            </SectionHeading>
-            <div className="max-w-xl mx-auto">
-              <TestDatesCalendarWrapper exam="gre" />
-            </div>
+            </ScrollAnimation>
           </section>
 
           {/* Overview Section */}
           <section className="mb-12">
-            <SectionHeading>Overview</SectionHeading>
-            <div className="space-y-4 text-neutral-700">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>Overview</SectionHeading>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="space-y-4 text-neutral-700">
               <p>
                 The Graduate Record Examinations (GRE) is a standardized test that is an admissions requirement for many graduate schools in the United States and Canada, as well as for some business schools.
               </p>
               <p>
                 The GRE General Test is administered via computer at our testing center. Overall test time is about 1 hour 58 minutes. The GRE is accepted by thousands of graduate and business schools worldwide and provides a common measure for comparing candidates as part of the admissions process.
               </p>
-            </div>
+              </div>
+            </ScrollAnimation>
           </section>
 
           {/* Registration Section */}
           <section className="mb-12">
-            <SectionHeading>Registration</SectionHeading>
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>Registration</SectionHeading>
+            </ScrollAnimation>
             <div className="space-y-3 text-neutral-700">
-              <p>To register for the GRE General Test:</p>
-              <ol className="list-decimal list-inside space-y-2 ml-4">
+              <ScrollAnimation direction="up" delay={0.2}>
+                <p>To register for the GRE General Test:</p>
+              </ScrollAnimation>
+              <ScrollAnimation direction="up" delay={0.3}>
+                <ol className="list-decimal list-inside space-y-2 ml-4">
                 <li>Create an account on the official ETS website</li>
                 <li>Select EduTest Global as your testing center</li>
                 <li>Choose your preferred test date and time</li>
                 <li>Complete payment and registration</li>
                 <li>Receive confirmation with test day instructions</li>
-              </ol>
+                </ol>
+              </ScrollAnimation>
             </div>
           </section>
 
           {/* Before You Come Section */}
           <section className="mb-12">
-            <SectionHeading>Before You Come</SectionHeading>
-            <ul className="space-y-3 text-neutral-700 list-disc list-inside ml-4">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>Before You Come</SectionHeading>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <ul className="space-y-3 text-neutral-700 list-disc list-inside ml-4">
               <li>Bring a valid, government-issued photo ID (passport or national ID)</li>
               <li>Arrive at least 30 minutes before your scheduled test time</li>
               <li>Review the ETS GRE test day policies and requirements</li>
               <li>Ensure you know your ETS account login credentials</li>
               <li>Do not bring personal items; lockers are provided for storage</li>
-            </ul>
+              </ul>
+            </ScrollAnimation>
           </section>
 
           {/* What to Expect on Test Day Section */}
           <section className="mb-12">
-            <SectionHeading>What to Expect on Test Day</SectionHeading>
-            <ul className="space-y-3 text-neutral-700 list-disc list-inside ml-4">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>What to Expect on Test Day</SectionHeading>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <ul className="space-y-3 text-neutral-700 list-disc list-inside ml-4">
               <li>Check-in process with ID verification and photo capture</li>
               <li>Secure testing environment with individual workstations</li>
               <li>Computer-based test administration with on-screen calculator provided</li>
               <li>Breaks scheduled between test sections</li>
               <li>Professional staff available for assistance throughout the test</li>
               <li>Scores are available approximately 8–10 days after the test date</li>
-            </ul>
+              </ul>
+            </ScrollAnimation>
           </section>
 
           {/* Location & Contact Section */}
           <section className="bg-neutral-50 p-8 rounded-lg border border-neutral-200">
-            <h2 className="text-2xl font-semibold mb-6 text-primary">Location & Contact</h2>
-            <div className="space-y-4 text-neutral-700">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <h2 className="text-2xl font-semibold mb-6 text-primary">Location & Contact</h2>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="space-y-4 text-neutral-700">
               <div>
                 <p className="font-semibold mb-1">Address:</p>
                 <p>67/1 Baghramyan Ave., Yerevan, Armenia</p>
@@ -231,7 +264,8 @@ export default function GREPage() {
                   Contact Us
                 </Button>
               </div>
-            </div>
+              </div>
+            </ScrollAnimation>
           </section>
         </div>
       </Container>

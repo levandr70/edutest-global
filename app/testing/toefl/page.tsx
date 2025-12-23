@@ -3,6 +3,8 @@ import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import Button from "@/components/Button";
 import TestDatesCalendarWrapper from "@/components/testing/TestDatesCalendarWrapper";
+import ScrollAnimation from "@/components/ScrollAnimation";
+import StaggerAnimation from "@/components/StaggerAnimation";
 
 export const metadata: Metadata = {
   title: "TOEFL Testing",
@@ -16,7 +18,7 @@ export default function TOEFLPage() {
       <Container>
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
-          <div className="mb-16">
+          <ScrollAnimation direction="up" className="mb-16">
             <div className="bg-neutral-50 rounded-lg p-8 md:p-12 border border-neutral-200">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-center">
                 TOEFL iBT Testing
@@ -25,23 +27,27 @@ export default function TOEFLPage() {
                 EduTest Global delivers the TOEFL Internet-Based Test (iBT) at our testing center in Yerevan, Armenia. We provide a secure, professional environment for your English proficiency assessment.
               </p>
             </div>
-          </div>
+          </ScrollAnimation>
 
           {/* About TOEFL iBT® Section */}
           <section className="mb-16">
-            <SectionHeading>
-              <div>
-                <div className="text-3xl md:text-4xl font-bold mb-2">About TOEFL iBT®</div>
-              </div>
-            </SectionHeading>
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>
+                <div>
+                  <div className="text-3xl md:text-4xl font-bold mb-2">About TOEFL iBT®</div>
+                </div>
+              </SectionHeading>
+            </ScrollAnimation>
             
-            <div className="space-y-6 text-neutral-700 mb-8">
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="space-y-6 text-neutral-700 mb-8">
               <p>
                 The TOEFL iBT evaluates all four language skills essential for effective communication: Reading, Listening, Speaking, and Writing. The test is administered via computer at our testing center and is accepted by more than 11,000 universities and institutions worldwide.
               </p>
-            </div>
+              </div>
+            </ScrollAnimation>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <StaggerAnimation className="grid md:grid-cols-2 gap-6 mb-8" staggerDelay={0.1}>
               {/* Test Structure & Timing Card */}
               <div className="bg-white border border-neutral-200 rounded-lg p-6">
                 <h3 className="text-xl font-semibold mb-4 text-primary">Test Structure & Timing</h3>
@@ -112,10 +118,11 @@ export default function TOEFLPage() {
                   <p>TOEFL iBT fee varies by location. Please check the ETS website for current fees in your area.</p>
                 </div>
               </div>
-            </div>
+            </StaggerAnimation>
 
             {/* Official ETS Links */}
-            <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-6">
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold mb-4 text-primary">Official ETS Links</h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 <a
@@ -159,30 +166,37 @@ export default function TOEFLPage() {
                   Test Day Info
                 </a>
               </div>
-            </div>
+              </div>
+            </ScrollAnimation>
           </section>
 
           {/* Announced Test Dates Section */}
           <section className="mb-16 pt-16 border-t border-neutral-200">
-            <SectionHeading>
-              <div>
-                <div className="text-3xl md:text-4xl font-bold mb-2">Announced TOEFL iBT Test Dates</div>
-                <div className="text-base md:text-lg font-normal text-neutral-600 mt-2">
-                  Announced sessions at our testing center. Registration is completed through ETS.
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>
+                <div>
+                  <div className="text-3xl md:text-4xl font-bold mb-2">Announced TOEFL iBT Test Dates</div>
+                  <div className="text-base md:text-lg font-normal text-neutral-600 mt-2">
+                    Announced sessions at our testing center. Registration is completed through ETS.
+                  </div>
                 </div>
+              </SectionHeading>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="max-w-xl mx-auto">
+                <TestDatesCalendarWrapper exam="toefl" />
               </div>
-            </SectionHeading>
-            <div className="max-w-xl mx-auto">
-              <TestDatesCalendarWrapper exam="toefl" />
-            </div>
+            </ScrollAnimation>
           </section>
 
           {/* Test Content and Structure Section */}
           <section className="mb-16 pt-16 border-t border-neutral-200">
-            <SectionHeading>Test Content and Structure</SectionHeading>
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>Test Content and Structure</SectionHeading>
+            </ScrollAnimation>
             <div className="space-y-6 text-neutral-700">
               {/* Update Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+              <StaggerAnimation className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6" staggerDelay={0.1}>
                 <div className="bg-white border border-neutral-200 rounded-lg p-4">
                   <p className="font-semibold text-gray-900 mb-2">Content students can relate to</p>
                   <p className="text-sm text-neutral-700">
@@ -207,19 +221,24 @@ export default function TOEFLPage() {
                     A more streamlined booking-to-scoring experience designed to reduce confusion and improve the overall test experience.
                   </p>
                 </div>
-              </div>
+              </StaggerAnimation>
               
               {/* Compliance Note */}
-              <p className="text-sm text-neutral-500 italic mt-6 pt-4 border-t border-neutral-200">
-                Test format, content, registration, fees, and scoring are determined by ETS.
-              </p>
+              <ScrollAnimation direction="fade" delay={0.2}>
+                <p className="text-sm text-neutral-500 italic mt-6 pt-4 border-t border-neutral-200">
+                  Test format, content, registration, fees, and scoring are determined by ETS.
+                </p>
+              </ScrollAnimation>
             </div>
           </section>
 
           {/* Test Section and Timing Overview */}
           <section className="mb-16 pt-16 border-t border-neutral-200">
-            <SectionHeading>Test Section and Timing Overview</SectionHeading>
-            <div className="space-y-4 text-neutral-700">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>Test Section and Timing Overview</SectionHeading>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="space-y-4 text-neutral-700">
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse border border-neutral-200">
                   <thead>
@@ -286,15 +305,20 @@ export default function TOEFLPage() {
               <p className="text-sm text-neutral-500 italic mt-4">
                 As the test adapts, test time and items may vary.
               </p>
-            </div>
+              </div>
+            </ScrollAnimation>
           </section>
 
           {/* Registration Section */}
           <section className="mb-16 pt-16 border-t border-neutral-200">
-            <SectionHeading>Registration</SectionHeading>
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>Registration</SectionHeading>
+            </ScrollAnimation>
             <div className="space-y-4 text-neutral-700">
-              <p>To register for the TOEFL iBT:</p>
-              <div className="space-y-3 mt-4">
+              <ScrollAnimation direction="up" delay={0.2}>
+                <p>To register for the TOEFL iBT:</p>
+              </ScrollAnimation>
+              <StaggerAnimation className="space-y-3 mt-4" staggerDelay={0.1}>
                 <div className="bg-white border border-neutral-200 rounded-lg p-4">
                   <p className="font-semibold text-gray-900 mb-1">1. Create an account</p>
                   <p className="text-sm">Create an account on the official ETS website</p>
@@ -315,17 +339,22 @@ export default function TOEFLPage() {
                   <p className="font-semibold text-gray-900 mb-1">5. Receive confirmation</p>
                   <p className="text-sm">Receive confirmation with test day instructions</p>
                 </div>
-              </div>
-              <p className="text-sm text-neutral-500 italic mt-6 pt-4 border-t border-neutral-200">
-                Registration, fees, and scheduling are managed by ETS. Please follow official instructions in your ETS account.
-              </p>
+              </StaggerAnimation>
+              <ScrollAnimation direction="fade" delay={0.2}>
+                <p className="text-sm text-neutral-500 italic mt-6 pt-4 border-t border-neutral-200">
+                  Registration, fees, and scheduling are managed by ETS. Please follow official instructions in your ETS account.
+                </p>
+              </ScrollAnimation>
             </div>
           </section>
 
           {/* Before You Come Section */}
           <section className="mb-16 pt-16 border-t border-neutral-200">
-            <SectionHeading>Before You Come</SectionHeading>
-            <div className="space-y-4 text-neutral-700">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>Before You Come</SectionHeading>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="space-y-4 text-neutral-700">
               <p className="text-sm text-neutral-600 font-medium mb-3">
                 Bring acceptable identification as required by ETS.
               </p>
@@ -340,15 +369,18 @@ export default function TOEFLPage() {
                 <li>Ensure you know your ETS account login credentials</li>
                 <li>Do not bring personal items; lockers are provided for storage</li>
               </ul>
-            </div>
+              </div>
+            </ScrollAnimation>
           </section>
 
           {/* What to Expect on Test Day Section */}
           <section className="mb-16 pt-16 border-t border-neutral-200">
-            <SectionHeading>What to Expect on Test Day</SectionHeading>
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>What to Expect on Test Day</SectionHeading>
+            </ScrollAnimation>
             <div className="space-y-6 text-neutral-700">
               {/* Test Day Timeline */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+              <StaggerAnimation className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6" staggerDelay={0.1}>
                 <div>
                   <p className="font-semibold text-gray-900 mb-1">Check-in</p>
                   <p className="text-sm">ID verification and photo capture</p>
@@ -365,19 +397,24 @@ export default function TOEFLPage() {
                   <p className="font-semibold text-gray-900 mb-1">Results</p>
                   <p className="text-sm">Scores available in ETS account 4–8 days after test date</p>
                 </div>
-              </div>
+              </StaggerAnimation>
               
               {/* Additional details */}
-              <ul className="space-y-3 list-disc list-inside ml-4 mt-6">
-                <li>Professional staff available for assistance throughout the test</li>
-              </ul>
+              <ScrollAnimation direction="fade" delay={0.2}>
+                <ul className="space-y-3 list-disc list-inside ml-4 mt-6">
+                  <li>Professional staff available for assistance throughout the test</li>
+                </ul>
+              </ScrollAnimation>
             </div>
           </section>
 
           {/* Location & Contact Section */}
           <section className="mb-16 pt-16 border-t border-neutral-200">
-            <SectionHeading>Location & Contact</SectionHeading>
-            <div className="bg-neutral-50 rounded-lg p-8 border border-neutral-200">
+            <ScrollAnimation direction="up" delay={0.1}>
+              <SectionHeading>Location & Contact</SectionHeading>
+            </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.2}>
+              <div className="bg-neutral-50 rounded-lg p-8 border border-neutral-200">
               <div className="space-y-6 text-neutral-700">
                 <div>
                   <p className="font-semibold mb-2 text-gray-900">Address</p>
@@ -404,7 +441,8 @@ export default function TOEFLPage() {
                   </Button>
                 </div>
               </div>
-            </div>
+              </div>
+            </ScrollAnimation>
           </section>
         </div>
       </Container>
