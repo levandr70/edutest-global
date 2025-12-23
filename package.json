@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pre-deploy": "node scripts/pre-deploy-check.js",
+    "verify-env": "node scripts/verify-env.js"
   },
   "dependencies": {
     "@fullcalendar/core": "^6.1.19",

@@ -3,13 +3,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { getMetadataBaseUrl } from "@/lib/env";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: getMetadataBaseUrl(),
   title: {
     default: "EduTest Global — International Testing Center",
     template: "%s | EduTest Global",
