@@ -100,12 +100,12 @@ export default function Home() {
               </h1>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.4}>
-              <p className="text-xl md:text-2xl mb-4 text-primary-100 max-w-2xl mx-auto">
+              <p className="text-base sm:text-xl md:text-2xl mb-4 text-primary-100 max-w-2xl mx-auto px-4">
                 Authorized testing center for official international exams. Secure, professional administration in a comfortable testing environment.
               </p>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.5}>
-              <p className="text-sm md:text-base mb-10 text-primary-200 max-w-2xl mx-auto">
+              <p className="text-xs sm:text-sm md:text-base mb-8 sm:mb-10 text-primary-200 max-w-2xl mx-auto px-4">
                 67/1 Baghramyan Ave • Open 10:00–18:00
               </p>
             </ScrollAnimation>
@@ -123,11 +123,11 @@ export default function Home() {
       {/* Trust Bar */}
       <section className="py-8 bg-neutral-50 border-b border-neutral-200">
         <Container>
-          <StaggerAnimation className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8" staggerDelay={0.1}>
+          <StaggerAnimation className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8" staggerDelay={0.1}>
             {trustBar.map((item, index) => (
               <div
                 key={index}
-                className="text-center md:text-left flex flex-col md:flex-row items-center md:items-start gap-2"
+                className="text-center sm:text-center md:text-left flex flex-col sm:flex-col md:flex-row items-center md:items-start gap-2 sm:gap-2"
               >
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center">
                   <svg
@@ -145,10 +145,10 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-neutral-900 text-sm md:text-base">
+                  <h4 className="font-semibold text-neutral-900 text-sm sm:text-sm md:text-base">
                     {item.title}
                   </h4>
-                  <p className="text-xs md:text-sm text-neutral-600">
+                  <p className="text-xs sm:text-xs md:text-sm text-neutral-600 mt-1">
                     {item.description}
                   </p>
                 </div>
@@ -197,28 +197,28 @@ export default function Home() {
           </StaggerAnimation>
           
           {/* Announced Dates Quick Access */}
-          <ScrollAnimation direction="up" delay={0.3}>
-            <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
-              <Link
-                href="/testing/toefl"
-                className="px-4 py-2 text-sm font-medium text-neutral-700 bg-white hover:bg-neutral-50 rounded-lg border border-neutral-200 hover:border-primary transition-colors"
-              >
-                TOEFL Dates
-              </Link>
-              <Link
-                href="/testing/gre"
-                className="px-4 py-2 text-sm font-medium text-neutral-700 bg-white hover:bg-neutral-50 rounded-lg border border-neutral-200 hover:border-primary transition-colors"
-              >
-                GRE Dates
-              </Link>
-              <Link
-                href="/testing/act"
-                className="px-4 py-2 text-sm font-medium text-neutral-700 bg-white hover:bg-neutral-50 rounded-lg border border-neutral-200 hover:border-primary transition-colors"
-              >
-                ACT Dates
-              </Link>
-            </div>
-          </ScrollAnimation>
+            <ScrollAnimation direction="up" delay={0.3}>
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-2xl mx-auto px-4">
+                <Link
+                  href="/testing/toefl"
+                  className="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-neutral-700 bg-white hover:bg-neutral-50 rounded-lg border border-neutral-200 hover:border-primary transition-colors"
+                >
+                  TOEFL Dates
+                </Link>
+                <Link
+                  href="/testing/gre"
+                  className="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-neutral-700 bg-white hover:bg-neutral-50 rounded-lg border border-neutral-200 hover:border-primary transition-colors"
+                >
+                  GRE Dates
+                </Link>
+                <Link
+                  href="/testing/act"
+                  className="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-neutral-700 bg-white hover:bg-neutral-50 rounded-lg border border-neutral-200 hover:border-primary transition-colors"
+                >
+                  ACT Dates
+                </Link>
+              </div>
+            </ScrollAnimation>
         </Container>
       </section>
 
@@ -233,12 +233,12 @@ export default function Home() {
               We deliver computer-based assessments on behalf of leading international testing providers.
             </p>
           </ScrollAnimation>
-          <StaggerAnimation className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto" staggerDelay={0.1}>
+          <StaggerAnimation className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-8 max-w-4xl mx-auto px-4" staggerDelay={0.1}>
             {testingPartners.map((partner) => (
               <Link
                 key={partner.name}
                 href={partner.href}
-                className="bg-white px-6 py-4 rounded-md border border-neutral-300 hover:border-primary hover:bg-neutral-50 text-center text-neutral-700 font-medium transition-colors"
+                className="bg-white px-3 sm:px-4 md:px-6 py-3 sm:py-4 rounded-md border border-neutral-300 hover:border-primary hover:bg-neutral-50 text-center text-neutral-700 font-medium text-sm sm:text-base transition-colors"
               >
                 {partner.name}
               </Link>
@@ -301,12 +301,12 @@ export default function Home() {
       {/* Contact CTA Section */}
       <section className="py-12 md:py-16 bg-primary text-white">
         <Container>
-          <ScrollAnimation direction="up" duration={0.8} className="max-w-4xl mx-auto text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
+          <ScrollAnimation direction="up" duration={0.8} className="max-w-4xl mx-auto text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 md:p-12 border border-white/20">
             <ScrollAnimation direction="fade" delay={0.2}>
               <h2 className="mb-4 text-white">Ready to Get Started?</h2>
             </ScrollAnimation>
             <ScrollAnimation direction="fade" delay={0.3}>
-              <p className="text-lg md:text-xl mb-8 text-primary-100 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-primary-100 max-w-2xl mx-auto px-4">
                 Contact us today to learn more about our testing services and
                 certification programs. Our team is here to help you succeed.
               </p>
@@ -318,7 +318,7 @@ export default function Home() {
                 </Button>
                 <a
                   href="tel:+37460509709"
-                  className="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold rounded-lg transition-all duration-300 bg-neutral-700 text-white hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-500 focus:ring-offset-white shadow-sm hover:shadow-md active:scale-[0.98]"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3.5 text-sm sm:text-base font-semibold rounded-lg transition-all duration-300 bg-neutral-700 text-white hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-500 focus:ring-offset-white shadow-sm hover:shadow-md active:scale-[0.98]"
                 >
                   Call
                 </a>

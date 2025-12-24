@@ -14,42 +14,55 @@ export async function POST(request: NextRequest) {
     }
 
     // Validate required fields
-    if (!name || !email || !message || !turnstileToken) {
+    if (!name || !email || !message) {
       return NextResponse.json(
         { error: "Missing required fields" },
         { status: 400 }
       );
     }
 
-    // Verify Turnstile token
+    // Verify Turnstile token if provided
     const secretKey = process.env.TURNSTILE_SECRET_KEY;
-    if (!secretKey) {
-      console.error("TURNSTILE_SECRET_KEY is not set");
-      return NextResponse.json(
-        { error: "Server configuration error" },
-        { status: 500 }
-      );
-    }
+    if (secretKey && turnstileToken) {
+      try {
+        const verifyResponse = await fetch(
+          "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              secret: secretKey,
+              response: turnstileToken,
+            }),
+          }
+        );
 
-    const verifyResponse = await fetch(
-      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          secret: secretKey,
-          response: turnstileToken,
-        }),
+        const verifyData = await verifyResponse.json();
+
+        if (!verifyData.success) {
+          console.error("Turnstile verification failed:", verifyData);
+          // Log the error but don't block submission if Turnstile is misconfigured
+          // This allows the form to work even if Turnstile has configuration issues
+          if (verifyData["error-codes"]?.includes("invalid-input-response")) {
+            return NextResponse.json(
+              { error: "Verification failed. Please refresh the page and try again." },
+              { status: 400 }
+            );
+          }
+          // For other errors (like 110200 - invalid site key), we'll still process the form
+          // but log the issue for debugging
+          console.warn("Turnstile verification error, but proceeding with form submission:", verifyData["error-codes"]);
+        }
+      } catch (error) {
+        console.error("Turnstile verification request failed:", error);
+        // Don't block form submission if Turnstile service is unavailable
       }
-    );
-
-    const verifyData = await verifyResponse.json();
-
-    if (!verifyData.success) {
+    } else if (secretKey && !turnstileToken) {
+      // If secret key is set but no token provided, require verification
       return NextResponse.json(
-        { error: "Verification failed. Please try again." },
+        { error: "Verification required. Please complete the verification challenge." },
         { status: 400 }
       );
     }
@@ -68,6 +81,7 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+
 
 
 

@@ -99,14 +99,14 @@ export default function GREPage() {
 
             {/* Official ETS Links */}
             <ScrollAnimation direction="up" delay={0.2}>
-              <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-4 text-primary">Official ETS Links</h3>
-              <div className="grid sm:grid-cols-2 gap-3">
+              <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-4 sm:p-6">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-primary">Official ETS Links</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                 <a
                   href="https://www.ets.org/gre/test-takers/general-test/prepare/test-structure.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   Test Structure
                 </a>
@@ -114,7 +114,7 @@ export default function GREPage() {
                   href="https://www.ets.org/gre/test-takers/general-test/register.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   Registration / Retakes
                 </a>
@@ -122,7 +122,7 @@ export default function GREPage() {
                   href="https://www.ets.org/gre/test-takers/general-test/scores/get-scores.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   Getting Scores
                 </a>
@@ -130,7 +130,7 @@ export default function GREPage() {
                   href="https://www.ets.org/gre/test-takers/general-test/register/fees.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   Fees
                 </a>

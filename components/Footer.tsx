@@ -16,24 +16,24 @@ export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-neutral-300">
       <Container>
-        <div className="py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="py-8 sm:py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">
+            <h3 className="text-white text-lg sm:text-xl font-bold mb-3 sm:mb-4">
               EduTest Global
             </h3>
-            <p className="text-sm text-neutral-400">
+            <p className="text-xs sm:text-sm text-neutral-400">
               International Testing Center
             </p>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Quick Links</h4>
+            <ul className="space-y-1.5 sm:space-y-2">
               {navigation.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="hover:text-white transition-colors duration-200 text-sm text-neutral-400"
+                    className="hover:text-white transition-colors duration-200 text-xs sm:text-sm text-neutral-400"
                   >
                     {item.name}
                   </Link>
@@ -43,20 +43,20 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Contact</h4>
-            <div className="space-y-2 text-sm text-neutral-400 mb-4">
+            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Contact</h4>
+            <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-neutral-400 mb-3 sm:mb-4">
               <p>67/1 Baghramyan Ave.</p>
               <p>Yerevan, Armenia</p>
               <p>Hours: 10:00–18:00</p>
             </div>
             {/* Action Buttons */}
-            <div className="mt-4">
+            <div className="mt-3 sm:mt-4">
               <a
                 href="tel:+37460509709"
-                className="px-4 py-2 bg-primary text-white rounded-md font-semibold hover:bg-primary-800 transition-colors text-sm flex items-center justify-center gap-2"
+                className="px-3 sm:px-4 py-1.5 sm:py-2 bg-primary text-white rounded-md font-semibold hover:bg-primary-800 transition-colors text-xs sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2"
               >
                 <svg
-                  className="w-4 h-4"
+                  className="w-3.5 h-3.5 sm:w-4 sm:h-4"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -74,9 +74,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-neutral-800 py-6 text-center text-sm text-neutral-400">
+        <div className="border-t border-neutral-800 py-4 sm:py-6 text-center text-xs sm:text-sm text-neutral-400 px-4">
           <p>&copy; {new Date().getFullYear()} EduTest Global. All rights reserved.</p>
-          <p className="mt-2 text-xs text-neutral-500">
+          <p className="mt-1.5 sm:mt-2 text-xs text-neutral-500">
             Exam availability, scheduling, and registration are determined by each provider.
           </p>
         </div>

@@ -26,10 +26,10 @@ export default function ContactPage() {
           </ScrollAnimation>
 
           {/* Contact Cards */}
-          <StaggerAnimation className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12" staggerDelay={0.15}>
+          <StaggerAnimation className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-12" staggerDelay={0.15}>
             {/* Address Card */}
-            <div className="bg-white p-6 rounded-lg shadow-md border border-neutral-200">
-              <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mb-4">
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md border border-neutral-200">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary-100 flex items-center justify-center mb-3 sm:mb-4">
                 <svg
                   className="w-6 h-6 text-primary"
                   fill="none"
@@ -50,18 +50,18 @@ export default function ContactPage() {
                   />
                 </svg>
               </div>
-              <h2 className="text-xl font-semibold mb-3 text-primary">
+              <h2 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-primary">
                 Address
               </h2>
-              <div className="space-y-1 text-neutral-700">
+              <div className="space-y-1 text-sm sm:text-base text-neutral-700">
                 <p className="font-medium">67/1 Baghramyan Ave.</p>
                 <p>Yerevan, Armenia</p>
               </div>
             </div>
 
             {/* Phone Card */}
-            <div className="bg-white p-6 rounded-lg shadow-md border border-neutral-200">
-              <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mb-4">
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md border border-neutral-200">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary-100 flex items-center justify-center mb-3 sm:mb-4">
                 <svg
                   className="w-6 h-6 text-primary"
                   fill="none"
@@ -76,10 +76,10 @@ export default function ContactPage() {
                   />
                 </svg>
               </div>
-              <h2 className="text-xl font-semibold mb-3 text-primary">
+              <h2 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-primary">
                 Phone
               </h2>
-              <div className="space-y-2 text-neutral-700">
+              <div className="space-y-2 text-sm sm:text-base text-neutral-700">
                 <p>
                   <a
                     href="tel:+37460509709"
@@ -100,8 +100,8 @@ export default function ContactPage() {
             </div>
 
             {/* Hours Card */}
-            <div className="bg-white p-6 rounded-lg shadow-md border border-neutral-200">
-              <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mb-4">
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md border border-neutral-200">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary-100 flex items-center justify-center mb-3 sm:mb-4">
                 <svg
                   className="w-6 h-6 text-primary"
                   fill="none"
@@ -116,26 +116,26 @@ export default function ContactPage() {
                   />
                 </svg>
               </div>
-              <h2 className="text-xl font-semibold mb-3 text-primary">
+              <h2 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-primary">
                 Business Hours
               </h2>
-              <p className="text-neutral-700 text-lg font-medium">10:00–18:00</p>
+              <p className="text-neutral-700 text-base sm:text-lg font-medium">10:00–18:00</p>
             </div>
           </StaggerAnimation>
 
           {/* Google Map */}
           <ScrollAnimation direction="up" delay={0.2} className="mb-12">
             <div className="bg-white rounded-lg shadow-md border border-neutral-200 overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps?q=67%2F1+Baghramyan+Ave%2C+Yerevan%2C+Armenia&output=embed"
-                width="100%"
-                height="400"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="EduTest Global Location"
-                className="w-full border-0"
-              />
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://www.google.com/maps?q=67%2F1+Baghramyan+Ave%2C+Yerevan%2C+Armenia&output=embed"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="EduTest Global Location"
+                  className="absolute top-0 left-0 w-full h-full border-0"
+                />
+              </div>
             </div>
           </ScrollAnimation>
 
@@ -205,8 +205,8 @@ export default function ContactPage() {
 
           {/* Contact Form */}
           <ScrollAnimation direction="up" delay={0.2}>
-            <div className="bg-white p-8 rounded-lg shadow-md border border-neutral-200">
-            <h2 className="text-2xl font-semibold mb-6 text-primary text-center">
+            <div className="bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-md border border-neutral-200">
+            <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-primary text-center">
               Send Us a Message
             </h2>
             <ContactForm />
@@ -215,15 +215,15 @@ export default function ContactPage() {
 
           {/* Quick Actions */}
           <ScrollAnimation direction="up" delay={0.3}>
-            <div className="mt-12 bg-neutral-50 p-8 rounded-lg text-center">
-            <h2 className="text-2xl font-semibold mb-4">Prefer to Call?</h2>
-            <p className="text-neutral-600 mb-6">
+            <div className="mt-8 sm:mt-12 bg-neutral-50 p-6 sm:p-8 rounded-lg text-center">
+            <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Prefer to Call?</h2>
+            <p className="text-sm sm:text-base text-neutral-600 mb-4 sm:mb-6">
               Reach out to us directly via phone for immediate assistance.
             </p>
             <div className="flex justify-center">
               <a
                 href="tel:+37460509709"
-                className="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-sm hover:shadow-md active:scale-[0.98] bg-primary text-white hover:bg-primary-800 focus:ring-primary-500 focus:ring-offset-white"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3.5 text-sm sm:text-base font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-sm hover:shadow-md active:scale-[0.98] bg-primary text-white hover:bg-primary-800 focus:ring-primary-500 focus:ring-offset-white"
               >
                 Call Us
               </a>

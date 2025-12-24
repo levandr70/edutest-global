@@ -107,14 +107,14 @@ export default function ACTPage() {
 
             {/* Official ACT Links */}
             <ScrollAnimation direction="up" delay={0.2}>
-              <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-4 text-primary">Official ACT Links</h3>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-4 sm:p-6">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-primary">Official ACT Links</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
                 <a
                   href="https://www.act.org/content/act/en/products-and-services/the-act/test-preparation/act-exam-sections-and-structure.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   Sections & Structure
                 </a>
@@ -122,7 +122,7 @@ export default function ACTPage() {
                   href="https://www.act.org/content/act/en/products-and-services/the-act/scores.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   Scores
                 </a>
@@ -130,7 +130,7 @@ export default function ACTPage() {
                   href="https://www.act.org/content/act/en/products-and-services/the-act/registration.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   Registration
                 </a>
@@ -138,7 +138,7 @@ export default function ACTPage() {
                   href="https://www.act.org/content/act/en/products-and-services/the-act/registration/fees.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   Fees
                 </a>
@@ -146,7 +146,7 @@ export default function ACTPage() {
                   href="https://www.act.org/content/act/en/products-and-services/the-act/test-day.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors sm:col-span-2 lg:col-span-1"
                 >
                   Test Day
                 </a>

@@ -109,14 +109,14 @@ export default function CELTAPage() {
 
             {/* Official Cambridge Links */}
             <ScrollAnimation direction="up" delay={0.2}>
-              <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-4 text-primary">Official Cambridge Links</h3>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-4 sm:p-6">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-primary">Official Cambridge Links</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
                 <a
                   href="https://www.cambridgeenglish.org/teaching-english/teaching-qualifications/celta/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   Main CELTA Page
                 </a>
@@ -124,7 +124,7 @@ export default function CELTAPage() {
                   href="https://www.cambridgeenglish.org/teaching-english/teaching-qualifications/celta/about-the-celta-course/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   About the Course
                 </a>
@@ -132,7 +132,7 @@ export default function CELTAPage() {
                   href="https://www.cambridgeenglish.org/teaching-english/teaching-qualifications/celta/ways-to-take-celta/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   Ways to Take CELTA
                 </a>
@@ -140,7 +140,7 @@ export default function CELTAPage() {
                   href="https://www.cambridgeenglish.org/teaching-english/teaching-qualifications/celta/preparing-for-your-celta/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   Preparing for CELTA
                 </a>
@@ -148,7 +148,7 @@ export default function CELTAPage() {
                   href="https://www.cambridgeenglish.org/Images/21816-celta-syllabus.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors sm:col-span-2 lg:col-span-1"
                 >
                   CELTA Syllabus (PDF)
                 </a>

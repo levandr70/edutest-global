@@ -31,8 +31,8 @@ export default function Accordion({
         aria-controls={contentId}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <h2 className="text-2xl font-semibold text-gray-900">{title}</h2>
-        <span className="text-2xl font-light text-gray-600 ml-4 flex-shrink-0">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 pr-4">{title}</h2>
+        <span className="text-xl sm:text-2xl font-light text-gray-600 ml-2 sm:ml-4 flex-shrink-0">
           {isOpen ? "−" : "+"}
         </span>
       </button>

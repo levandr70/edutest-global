@@ -29,9 +29,9 @@ export default function TestingPage() {
             <ScrollAnimation direction="up" delay={0.1}>
               <SectionHeading>Our Testing Partners</SectionHeading>
             </ScrollAnimation>
-            <StaggerAnimation className="grid md:grid-cols-2 gap-6 mb-8" staggerDelay={0.1}>
+            <StaggerAnimation className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8" staggerDelay={0.1}>
               {/* Pearson VUE Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
                 <h3 className="text-xl font-semibold mb-3 text-primary">Pearson VUE</h3>
                 <p className="text-sm text-neutral-700 mb-4">
                   Secure exam delivery for certification and licensure programs.
@@ -65,7 +65,7 @@ export default function TestingPage() {
               </div>
 
               {/* Kryterion Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
                 <h3 className="text-xl font-semibold mb-3 text-primary">Kryterion</h3>
                 <p className="text-sm text-neutral-700 mb-4">
                   Online testing solutions supporting secure exam delivery.
@@ -99,7 +99,7 @@ export default function TestingPage() {
               </div>
 
               {/* PSI Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
                 <h3 className="text-xl font-semibold mb-3 text-primary">PSI</h3>
                 <p className="text-sm text-neutral-700 mb-4">
                   Secure certification and licensure testing with a focus on test integrity.
@@ -125,7 +125,7 @@ export default function TestingPage() {
               </div>
 
               {/* Meazure Learning Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
                 <h3 className="text-xl font-semibold mb-3 text-primary">Meazure Learning</h3>
                 <p className="text-sm text-neutral-700 mb-4">
                   End-to-end exam development, delivery, and proctoring solutions.
@@ -162,57 +162,57 @@ export default function TestingPage() {
             <ScrollAnimation direction="up" delay={0.1}>
               <SectionHeading>How Professional Testing Works</SectionHeading>
             </ScrollAnimation>
-            <StaggerAnimation className="grid md:grid-cols-2 gap-6 mt-6" staggerDelay={0.1}>
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">
+            <StaggerAnimation className="grid md:grid-cols-2 gap-4 sm:gap-6 mt-4 sm:mt-6" staggerDelay={0.1}>
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xs sm:text-sm">
                     1
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Identify Your Exam</h3>
-                    <p className="text-sm text-neutral-700">
+                    <h3 className="font-semibold text-sm sm:text-base text-gray-900 mb-1.5 sm:mb-2">Identify Your Exam</h3>
+                    <p className="text-xs sm:text-sm text-neutral-700">
                       Identify your exam sponsor and program. Check which testing partner delivers your specific certification or licensure exam.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xs sm:text-sm">
                     2
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Register on Official Portal</h3>
-                    <p className="text-sm text-neutral-700">
+                    <h3 className="font-semibold text-sm sm:text-base text-gray-900 mb-1.5 sm:mb-2">Register on Official Portal</h3>
+                    <p className="text-xs sm:text-sm text-neutral-700">
                       Register on the official partner/sponsor portal. Complete your registration and payment through the exam sponsor's website.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xs sm:text-sm">
                     3
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Choose Test Center</h3>
-                    <p className="text-sm text-neutral-700">
+                    <h3 className="font-semibold text-sm sm:text-base text-gray-900 mb-1.5 sm:mb-2">Choose Test Center</h3>
+                    <p className="text-xs sm:text-sm text-neutral-700">
                       Choose EduTest Global as your test center (if applicable). Select our location during registration when the option is available.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xs sm:text-sm">
                     4
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Test Day</h3>
-                    <p className="text-sm text-neutral-700">
+                    <h3 className="font-semibold text-sm sm:text-base text-gray-900 mb-1.5 sm:mb-2">Test Day</h3>
+                    <p className="text-xs sm:text-sm text-neutral-700">
                       Arrive with required ID and follow test-day instructions. Bring acceptable identification and follow the rules provided in your confirmation email.
                     </p>
                   </div>

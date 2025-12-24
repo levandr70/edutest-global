@@ -60,8 +60,8 @@ export default function AboutPage() {
 
           {/* Visit Us Section */}
           <ScrollAnimation direction="up" delay={0.2}>
-            <section className="bg-neutral-50 p-8 rounded-lg border border-neutral-200">
-            <h2 className="text-2xl font-semibold mb-6 text-primary">Visit Us</h2>
+            <section className="bg-neutral-50 p-6 sm:p-8 rounded-lg border border-neutral-200">
+            <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-primary">Visit Us</h2>
             <div className="space-y-4 text-neutral-700">
               <div>
                 <p className="font-semibold mb-1">Address:</p>

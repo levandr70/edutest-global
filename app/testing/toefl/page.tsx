@@ -18,12 +18,12 @@ export default function TOEFLPage() {
       <Container>
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
-          <ScrollAnimation direction="up" className="mb-16">
-            <div className="bg-neutral-50 rounded-lg p-8 md:p-12 border border-neutral-200">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-center">
+          <ScrollAnimation direction="up" className="mb-12 sm:mb-16">
+            <div className="bg-neutral-50 rounded-lg p-6 sm:p-8 md:p-12 border border-neutral-200">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">
                 TOEFL iBT Testing
               </h1>
-              <p className="text-xl text-neutral-600 leading-relaxed max-w-3xl">
+              <p className="text-base sm:text-lg md:text-xl text-neutral-600 leading-relaxed max-w-3xl mx-auto">
                 EduTest Global delivers the TOEFL Internet-Based Test (iBT) at our testing center in Yerevan, Armenia. We provide a secure, professional environment for your English proficiency assessment.
               </p>
             </div>
@@ -122,14 +122,14 @@ export default function TOEFLPage() {
 
             {/* Official ETS Links */}
             <ScrollAnimation direction="up" delay={0.2}>
-              <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-4 text-primary">Official ETS Links</h3>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-4 sm:p-6">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-primary">Official ETS Links</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
                 <a
                   href="https://www.ets.org/toefl/test-takers/ibt/about/content.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   Content/Structure
                 </a>
@@ -137,7 +137,7 @@ export default function TOEFLPage() {
                   href="https://www.ets.org/toefl/test-takers/ibt/scores/get-scores.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   Get Scores
                 </a>
@@ -145,7 +145,7 @@ export default function TOEFLPage() {
                   href="https://www.ets.org/toefl/test-takers/ibt/register/id.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   ID Requirements
                 </a>
@@ -153,7 +153,7 @@ export default function TOEFLPage() {
                   href="https://www.ets.org/toefl/test-takers/ibt/register/fees.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                 >
                   Fees
                 </a>
@@ -161,7 +161,7 @@ export default function TOEFLPage() {
                   href="https://www.ets.org/toefl/test-takers/ibt/test-day/test-center-test-day.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors sm:col-span-2 lg:col-span-1"
                 >
                   Test Day Info
                 </a>
@@ -239,68 +239,72 @@ export default function TOEFLPage() {
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.2}>
               <div className="space-y-4 text-neutral-700">
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse border border-neutral-200">
-                  <thead>
-                    <tr className="bg-neutral-50">
-                      <th className="border border-neutral-200 px-4 py-3 text-left font-semibold text-gray-900">
-                        Section
-                      </th>
-                      <th className="border border-neutral-200 px-4 py-3 text-left font-semibold text-gray-900">
-                        What you do
-                      </th>
-                      <th className="border border-neutral-200 px-4 py-3 text-left font-semibold text-gray-900">
-                        Approx. base time
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="hover:bg-neutral-50">
-                      <td className="border border-neutral-200 px-4 py-3 font-medium text-gray-900">
-                        Reading
-                      </td>
-                      <td className="border border-neutral-200 px-4 py-3 text-sm">
-                        Read passages and answer questions
-                      </td>
-                      <td className="border border-neutral-200 px-4 py-3 text-sm">
-                        35 minutes
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-neutral-50 bg-white">
-                      <td className="border border-neutral-200 px-4 py-3 font-medium text-gray-900">
-                        Listening
-                      </td>
-                      <td className="border border-neutral-200 px-4 py-3 text-sm">
-                        Listen to lectures and conversations, answer questions
-                      </td>
-                      <td className="border border-neutral-200 px-4 py-3 text-sm">
-                        36 minutes
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-neutral-50">
-                      <td className="border border-neutral-200 px-4 py-3 font-medium text-gray-900">
-                        Speaking
-                      </td>
-                      <td className="border border-neutral-200 px-4 py-3 text-sm">
-                        Express opinions and respond to tasks
-                      </td>
-                      <td className="border border-neutral-200 px-4 py-3 text-sm">
-                        16 minutes
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-neutral-50 bg-white">
-                      <td className="border border-neutral-200 px-4 py-3 font-medium text-gray-900">
-                        Writing
-                      </td>
-                      <td className="border border-neutral-200 px-4 py-3 text-sm">
-                        Write responses to tasks
-                      </td>
-                      <td className="border border-neutral-200 px-4 py-3 text-sm">
-                        29 minutes
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div className="overflow-x-auto -mx-4 sm:mx-0">
+                <div className="inline-block min-w-full align-middle">
+                  <div className="overflow-hidden border border-neutral-200 rounded-lg">
+                    <table className="min-w-full divide-y divide-neutral-200">
+                      <thead className="bg-neutral-50">
+                        <tr>
+                          <th className="px-3 py-3 sm:px-4 text-left text-xs sm:text-sm font-semibold text-gray-900 whitespace-nowrap">
+                            Section
+                          </th>
+                          <th className="px-3 py-3 sm:px-4 text-left text-xs sm:text-sm font-semibold text-gray-900">
+                            What you do
+                          </th>
+                          <th className="px-3 py-3 sm:px-4 text-left text-xs sm:text-sm font-semibold text-gray-900 whitespace-nowrap">
+                            Approx. base time
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="bg-white divide-y divide-neutral-200">
+                        <tr className="hover:bg-neutral-50">
+                          <td className="px-3 py-3 sm:px-4 text-xs sm:text-sm font-medium text-gray-900 whitespace-nowrap">
+                            Reading
+                          </td>
+                          <td className="px-3 py-3 sm:px-4 text-xs sm:text-sm">
+                            Read passages and answer questions
+                          </td>
+                          <td className="px-3 py-3 sm:px-4 text-xs sm:text-sm whitespace-nowrap">
+                            35 minutes
+                          </td>
+                        </tr>
+                        <tr className="hover:bg-neutral-50 bg-white">
+                          <td className="px-3 py-3 sm:px-4 text-xs sm:text-sm font-medium text-gray-900 whitespace-nowrap">
+                            Listening
+                          </td>
+                          <td className="px-3 py-3 sm:px-4 text-xs sm:text-sm">
+                            Listen to lectures and conversations, answer questions
+                          </td>
+                          <td className="px-3 py-3 sm:px-4 text-xs sm:text-sm whitespace-nowrap">
+                            36 minutes
+                          </td>
+                        </tr>
+                        <tr className="hover:bg-neutral-50">
+                          <td className="px-3 py-3 sm:px-4 text-xs sm:text-sm font-medium text-gray-900 whitespace-nowrap">
+                            Speaking
+                          </td>
+                          <td className="px-3 py-3 sm:px-4 text-xs sm:text-sm">
+                            Express opinions and respond to tasks
+                          </td>
+                          <td className="px-3 py-3 sm:px-4 text-xs sm:text-sm whitespace-nowrap">
+                            16 minutes
+                          </td>
+                        </tr>
+                        <tr className="hover:bg-neutral-50 bg-white">
+                          <td className="px-3 py-3 sm:px-4 text-xs sm:text-sm font-medium text-gray-900 whitespace-nowrap">
+                            Writing
+                          </td>
+                          <td className="px-3 py-3 sm:px-4 text-xs sm:text-sm">
+                            Write responses to tasks
+                          </td>
+                          <td className="px-3 py-3 sm:px-4 text-xs sm:text-sm whitespace-nowrap">
+                            29 minutes
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
               <p className="text-sm text-neutral-500 italic mt-4">
                 As the test adapts, test time and items may vary.
@@ -448,18 +452,18 @@ export default function TOEFLPage() {
       </Container>
 
       {/* Mobile-only Sticky Bottom Action Bar */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-neutral-200 shadow-lg md:hidden z-50">
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-neutral-200 shadow-lg md:hidden z-50 safe-area-inset-bottom">
         <div className="container mx-auto px-4 py-3">
-          <div className="flex gap-3">
+          <div className="flex gap-2 sm:gap-3">
             <a
               href="tel:+37460509709"
-              className="flex-1 inline-flex items-center justify-center px-4 py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-primary-800 transition-colors text-sm"
+              className="flex-1 inline-flex items-center justify-center px-3 sm:px-4 py-2 sm:py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-primary-800 transition-colors text-xs sm:text-sm"
             >
               Call
             </a>
             <a
               href="/contact"
-              className="flex-1 inline-flex items-center justify-center px-4 py-2.5 bg-neutral-700 text-white rounded-lg font-semibold hover:bg-neutral-800 transition-colors text-sm"
+              className="flex-1 inline-flex items-center justify-center px-3 sm:px-4 py-2 sm:py-2.5 bg-neutral-700 text-white rounded-lg font-semibold hover:bg-neutral-800 transition-colors text-xs sm:text-sm"
             >
               Contact Us
             </a>

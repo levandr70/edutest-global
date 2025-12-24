@@ -25,6 +25,7 @@ export default function ContactForm() {
   const [turnstileToken, setTurnstileToken] = useState<string>("");
   const [isTurnstileReady, setIsTurnstileReady] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [turnstileError, setTurnstileError] = useState<string | null>(null);
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null;
     message: string;
@@ -41,14 +42,24 @@ export default function ContactForm() {
           sitekey: siteKey,
           callback: (token: string) => {
             setTurnstileToken(token);
+            setTurnstileError(null);
           },
-          "error-callback": () => {
+          "error-callback": (error?: any) => {
             setTurnstileToken("");
+            // Error 110200 typically means invalid site key or domain mismatch
+            if (error?.code === 110200 || error?.message?.includes("110200")) {
+              setTurnstileError("Verification configuration error. Please contact support.");
+              console.error("Turnstile error 110200: Invalid site key or domain mismatch. Check NEXT_PUBLIC_TURNSTILE_SITE_KEY and domain configuration in Cloudflare.");
+            } else {
+              setTurnstileError("Verification failed. Please refresh the page.");
+              console.error("Turnstile error:", error);
+            }
           },
         });
         widgetIdRef.current = widgetId;
       } catch (error) {
         console.error("Turnstile render error:", error);
+        setTurnstileError("Failed to load verification. Please refresh the page.");
       }
     }
 
@@ -66,6 +77,16 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    // If Turnstile is enabled but token is missing, show error
+    if (siteKey && !turnstileToken && !turnstileError) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please complete the verification challenge.",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
 
@@ -75,7 +96,7 @@ export default function ContactForm() {
       email: formData.get("email") as string,
       message: formData.get("message") as string,
       phone: formData.get("phone") as string || "",
-      turnstileToken: turnstileToken,
+      turnstileToken: turnstileToken || "",
       website: formData.get("website") as string || "",
     };
 
@@ -142,7 +163,7 @@ export default function ContactForm() {
   };
 
   if (!siteKey) {
-    console.warn("NEXT_PUBLIC_TURNSTILE_SITE_KEY is not set");
+    console.warn("NEXT_PUBLIC_TURNSTILE_SITE_KEY is not set. Turnstile verification will be disabled.");
   }
 
   return (
@@ -150,7 +171,18 @@ export default function ContactForm() {
       <Script
         src="https://challenges.cloudflare.com/turnstile/v0/api.js"
         strategy="lazyOnload"
-        onLoad={() => setIsTurnstileReady(true)}
+        onLoad={() => {
+          if (window.turnstile) {
+            setIsTurnstileReady(true);
+          } else {
+            console.error("Turnstile script loaded but window.turnstile is not available");
+            setTurnstileError("Failed to load verification service. Please refresh the page.");
+          }
+        }}
+        onError={() => {
+          console.error("Failed to load Turnstile script");
+          setTurnstileError("Failed to load verification service. Please refresh the page.");
+        }}
       />
       <form
         ref={formRef}
@@ -239,14 +271,25 @@ export default function ContactForm() {
             disabled={isSubmitting}
           />
         </div>
-        <div>
-          <div ref={turnstileRef} className="flex justify-center my-4" />
-          {siteKey && (
-            <p className="text-xs text-neutral-500 text-center mt-2">
-              Verification helps prevent spam.
-            </p>
-          )}
-        </div>
+        {siteKey && (
+          <div>
+            <div ref={turnstileRef} className="flex justify-center my-4" />
+            {turnstileError ? (
+              <div className="bg-yellow-50 border border-yellow-200 rounded-md p-3 mb-4">
+                <p className="text-xs text-yellow-800 text-center">
+                  {turnstileError}
+                </p>
+                <p className="text-xs text-yellow-700 text-center mt-1">
+                  You can still submit the form, but verification may fail. Please contact us directly if needed.
+                </p>
+              </div>
+            ) : (
+              <p className="text-xs text-neutral-500 text-center mt-2">
+                Verification helps prevent spam.
+              </p>
+            )}
+          </div>
+        )}
 
         {/* Status messages */}
         {submitStatus.type && (
@@ -262,9 +305,18 @@ export default function ContactForm() {
         )}
 
         <div className="text-center">
-          <Button type="submit" variant="primary" disabled={isSubmitting || !turnstileToken}>
+          <Button 
+            type="submit" 
+            variant="primary" 
+            disabled={isSubmitting || (siteKey && !turnstileToken && !turnstileError)}
+          >
             {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
+          {siteKey && turnstileError && (
+            <p className="text-xs text-neutral-500 mt-2">
+              Form submission may fail without verification. Please refresh the page to retry.
+            </p>
+          )}
         </div>
       </form>
     </>

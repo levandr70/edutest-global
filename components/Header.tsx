@@ -48,12 +48,14 @@ export default function Header() {
         <div className="bg-primary text-white py-2.5 relative">
           <Container>
             <div className="flex items-center justify-center">
-              <p className="text-sm font-medium text-center px-8">
-                Official International Exams in Yerevan • 10:00–18:00
+              <p className="text-xs sm:text-sm font-medium text-center px-8 sm:px-12 pr-10 sm:pr-12">
+                <span className="hidden sm:inline">Official International Exams in Yerevan • </span>
+                <span className="sm:hidden">International Exams • </span>
+                10:00–18:00
               </p>
               <button
                 onClick={handleDismissAnnouncement}
-                className="absolute right-4 md:right-8 p-1 hover:bg-primary-800 rounded transition-colors"
+                className="absolute right-2 sm:right-4 md:right-8 p-1 hover:bg-primary-800 rounded transition-colors flex-shrink-0"
                 aria-label="Dismiss announcement"
               >
                 <svg
@@ -80,7 +82,7 @@ export default function Header() {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="text-2xl font-bold text-primary hover:text-primary-800 transition-colors"
+              className="text-xl sm:text-2xl font-bold text-primary hover:text-primary-800 transition-colors"
             >
               EduTest Global
             </Link>
@@ -94,7 +96,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`px-4 py-2 rounded-md font-medium transition-all duration-200 ${
+                  className={`px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-md font-medium transition-all duration-200 text-sm sm:text-base ${
                     active
                       ? "bg-primary text-white"
                       : "text-neutral-700 hover:text-primary hover:bg-neutral-50"
@@ -107,10 +109,10 @@ export default function Header() {
             {/* Desktop Call Button */}
             <a
               href="tel:+37460509709"
-              className="ml-4 px-6 py-2 bg-primary text-white rounded-md font-semibold hover:bg-primary-800 transition-colors duration-200 flex items-center gap-2"
+              className="ml-4 px-4 sm:px-6 py-1.5 sm:py-2 bg-primary text-white rounded-md font-semibold hover:bg-primary-800 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base"
             >
               <svg
-                className="w-5 h-5"
+                className="w-4 h-4 sm:w-5 sm:h-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -122,7 +124,7 @@ export default function Header() {
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              Call
+              <span className="hidden sm:inline">Call</span>
             </a>
           </div>
 
