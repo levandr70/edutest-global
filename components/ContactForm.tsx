@@ -308,7 +308,7 @@ export default function ContactForm() {
           <Button 
             type="submit" 
             variant="primary" 
-            disabled={isSubmitting || (siteKey && !turnstileToken && !turnstileError)}
+            disabled={isSubmitting || Boolean(siteKey && !turnstileToken && !turnstileError)}
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
