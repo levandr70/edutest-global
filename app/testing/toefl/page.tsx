@@ -47,29 +47,29 @@ export default function TOEFLPage() {
               </div>
             </ScrollAnimation>
 
-            <StaggerAnimation className="grid md:grid-cols-2 gap-6 mb-8" staggerDelay={0.1}>
+            <StaggerAnimation className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8" staggerDelay={0.1}>
               {/* Test Structure & Timing Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Test Structure & Timing</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Test Structure & Timing</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <p className="font-medium text-neutral-900">Total time: The test takes just under 2 hours to complete, but plan for about 2.5 hours total including ~30 minutes for check-in.</p>
-                  <div className="space-y-2">
+                  <div className="space-y-1.5 sm:space-y-2">
                     <p className="font-medium text-neutral-900">Four sections:</p>
-                    <ul className="space-y-2 ml-4 list-disc">
+                    <ul className="space-y-1.5 sm:space-y-2 ml-4 list-disc">
                       <li><span className="font-medium">Reading:</span> 35 minutes, 20 questions</li>
                       <li><span className="font-medium">Listening:</span> 36 minutes, 28 questions</li>
                       <li><span className="font-medium">Speaking:</span> 16 minutes, 4 tasks</li>
                       <li><span className="font-medium">Writing:</span> 29 minutes, 2 tasks</li>
                     </ul>
                   </div>
-                  <p className="text-xs text-neutral-500 mt-3">No scheduled breaks in the TOEFL iBT test.</p>
+                  <p className="text-xs text-neutral-500 mt-2 sm:mt-3">No scheduled breaks in the TOEFL iBT test.</p>
                 </div>
               </div>
 
               {/* Scores & Validity Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Scores & Validity</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Scores & Validity</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <div>
                     <p className="font-medium text-neutral-900 mb-1">Score Availability:</p>
                     <p>Scores are available in your ETS account 4–8 days after your test date.</p>
@@ -86,9 +86,9 @@ export default function TOEFLPage() {
               </div>
 
               {/* Retakes Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Retakes</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Retakes</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <div>
                     <p className="font-medium text-neutral-900 mb-1">Retake Policy:</p>
                     <p>No limit to how many times you can take the TOEFL iBT, but you cannot take it more than once in a 3-day period.</p>
@@ -97,9 +97,9 @@ export default function TOEFLPage() {
               </div>
 
               {/* Test Day Essentials Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Test Day Essentials</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Test Day Essentials</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <div>
                     <p className="font-medium text-neutral-900 mb-1">ID Requirements:</p>
                     <p>ETS ID requirements vary by location and citizenship. ETS recommends bringing two forms of ID. Please confirm your acceptable ID on the ETS site.</p>
@@ -112,9 +112,9 @@ export default function TOEFLPage() {
               </div>
 
               {/* Fees Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6 md:col-span-2">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Fees</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6 md:col-span-2">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Fees</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <p>TOEFL iBT fee varies by location. Please check the ETS website for current fees in your area.</p>
                 </div>
               </div>
@@ -418,25 +418,25 @@ export default function TOEFLPage() {
               <SectionHeading>Location & Contact</SectionHeading>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.2}>
-              <div className="bg-neutral-50 rounded-lg p-8 border border-neutral-200">
-              <div className="space-y-6 text-neutral-700">
+              <div className="bg-neutral-50 rounded-lg p-4 sm:p-6 md:p-8 border border-neutral-200">
+              <div className="space-y-4 sm:space-y-6 text-sm sm:text-base text-neutral-700">
                 <div>
-                  <p className="font-semibold mb-2 text-gray-900">Address</p>
+                  <p className="font-semibold mb-1 sm:mb-2 text-gray-900">Address</p>
                   <p>67/1 Baghramyan Ave., Yerevan, Armenia</p>
                 </div>
                 <div>
-                  <p className="font-semibold mb-2 text-gray-900">Hours</p>
+                  <p className="font-semibold mb-1 sm:mb-2 text-gray-900">Hours</p>
                   <p>10:00–18:00</p>
                 </div>
                 <div>
-                  <p className="font-semibold mb-2 text-gray-900">Phone</p>
+                  <p className="font-semibold mb-1 sm:mb-2 text-gray-900">Phone</p>
                   <p>
                     <a href="tel:+37460509709" className="text-primary hover:underline">
                       +374 60 509-709
                     </a>
                   </p>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-3 sm:pt-4">
                   <Button href="tel:+37460509709" variant="primary">
                     Call
                   </Button>

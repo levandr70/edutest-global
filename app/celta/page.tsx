@@ -21,9 +21,9 @@ export default function CELTAPage() {
       <Container>
         <div className="max-w-4xl mx-auto">
           {/* Page Header */}
-          <ScrollAnimation direction="up" className="text-center mb-16">
-            <h1 className="mb-4">Cambridge CELTA in Yerevan</h1>
-            <p className="text-xl text-gray-600">
+          <ScrollAnimation direction="up" className="text-center mb-12 sm:mb-16">
+            <h1 className="mb-3 sm:mb-4">Cambridge CELTA in Yerevan</h1>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 px-4">
               Internationally recognized teacher training qualification • 2–3
               intakes per year
             </p>
@@ -47,20 +47,20 @@ export default function CELTAPage() {
               </div>
             </ScrollAnimation>
 
-            <StaggerAnimation className="grid md:grid-cols-2 gap-6 mb-8" staggerDelay={0.1}>
+            <StaggerAnimation className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8" staggerDelay={0.1}>
               {/* Recognition & Careers Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Recognition & Careers</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Recognition & Careers</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <p>CELTA is a widely recognised English teaching qualification. Cambridge states that three out of four English language teaching jobs require a CELTA qualification.</p>
                   <p>The qualification is internationally recognized and suitable for new and early-career teachers seeking formal certification.</p>
                 </div>
               </div>
 
               {/* Course Format Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Course Format</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Course Format</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <div>
                     <p className="font-medium text-neutral-900 mb-1">Full-time:</p>
                     <p>Usually 4–5 weeks</p>
@@ -70,27 +70,27 @@ export default function CELTAPage() {
                     <p>From a few months to a year</p>
                     <p className="text-xs text-neutral-500 mt-1">(varies by center schedule)</p>
                   </div>
-                  <p className="text-xs text-neutral-500 mt-3">Courses include at least 120 hours of contact time with tutors, teaching practice, feedback, and written assignments.</p>
+                  <p className="text-xs text-neutral-500 mt-2 sm:mt-3">Courses include at least 120 hours of contact time with tutors, teaching practice, feedback, and written assignments.</p>
                 </div>
               </div>
 
               {/* Entry Requirements Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Entry Requirements</h3>
-                <div className="space-y-3 text-sm">
-                  <ul className="space-y-2 ml-4 list-disc">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Entry Requirements</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
+                  <ul className="space-y-1.5 sm:space-y-2 ml-4 list-disc">
                     <li>18 or over</li>
                     <li>Education standard equivalent to entry into higher education</li>
                     <li>English: minimum high C1 level or above</li>
                   </ul>
-                  <p className="text-xs text-neutral-500 mt-3">All applicants must complete an application form, pre-interview task, and interview.</p>
+                  <p className="text-xs text-neutral-500 mt-2 sm:mt-3">All applicants must complete an application form, pre-interview task, and interview.</p>
                 </div>
               </div>
 
               {/* Assessment & Workload Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Assessment & Workload</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Assessment & Workload</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <div>
                     <p className="font-medium text-neutral-900 mb-1">Course Components:</p>
                     <ul className="space-y-1 ml-4 list-disc">
@@ -158,12 +158,12 @@ export default function CELTAPage() {
 
             {/* Ready to Apply CTA */}
             <ScrollAnimation direction="up" delay={0.3}>
-              <div className="bg-white border border-neutral-200 rounded-lg p-6 mt-6">
-              <h3 className="text-xl font-semibold mb-3 text-primary">Ready to Apply?</h3>
-              <p className="text-sm text-neutral-700 mb-4">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6 mt-4 sm:mt-6">
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-primary">Ready to Apply?</h3>
+              <p className="text-xs sm:text-sm text-neutral-700 mb-3 sm:mb-4">
                 Request the application pack and pre-interview task. Places are limited and intakes run 2–3 times per year.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                 <Button href="/contact" variant="primary">
                   Request Application Pack
                 </Button>
@@ -203,12 +203,12 @@ export default function CELTAPage() {
             </Accordion>
 
             <Accordion title="Is CELTA Right for You?" id="who-is-this-for">
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-gray-900">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-gray-900">
                     This course is for you if…
                   </h3>
-                  <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <ul className="list-disc list-inside space-y-1.5 sm:space-y-2 text-sm sm:text-base text-gray-700">
                     <li>You want to start a career in English language teaching</li>
                     <li>You are an early-career teacher seeking formal qualification</li>
                     <li>You want to teach English abroad</li>
@@ -218,10 +218,10 @@ export default function CELTAPage() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-gray-900">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-gray-900">
                     This course may not be suitable if…
                   </h3>
-                  <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <ul className="list-disc list-inside space-y-1.5 sm:space-y-2 text-sm sm:text-base text-gray-700">
                     <li>You have extensive teaching experience and qualifications</li>
                     <li>You cannot commit to the intensive course schedule</li>
                     <li>You prefer theoretical over practical training</li>
@@ -338,12 +338,12 @@ export default function CELTAPage() {
                   Courses section above for current pricing in AMD. Fees may vary
                   by course format and intake.
                 </p>
-                <div className="grid md:grid-cols-2 gap-8 mt-6">
+                <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mt-4 sm:mt-6">
                   <div>
-                    <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                    <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-gray-900">
                       Included in the course fee:
                     </h3>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
+                    <ul className="list-disc list-inside space-y-1.5 sm:space-y-2 text-sm sm:text-base text-gray-700">
                       <li>All tuition and input sessions</li>
                       <li>Teaching practice with real students</li>
                       <li>Observation of experienced teachers</li>
@@ -354,10 +354,10 @@ export default function CELTAPage() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                    <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-gray-900">
                       Not included:
                     </h3>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
+                    <ul className="list-disc list-inside space-y-1.5 sm:space-y-2 text-sm sm:text-base text-gray-700">
                       <li>Travel to and from the training center</li>
                       <li>Accommodation (if required)</li>
                       <li>Meals and refreshments</li>

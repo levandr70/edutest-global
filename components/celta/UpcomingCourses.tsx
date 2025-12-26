@@ -91,10 +91,10 @@ function HowToApplyPanel({
         onClick={() => setIsExpanded(!isExpanded)}
         aria-expanded={isExpanded}
         aria-controls={panelId}
-        className="w-full flex items-center justify-between px-4 py-3 text-left border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+        className="w-full flex items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3 text-left border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-neutral-300 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
       >
-        <span className="font-medium text-gray-900">How to apply</span>
-        <span className="text-xl font-light text-gray-600 flex-shrink-0 ml-4">
+        <span className="text-sm sm:text-base font-medium text-gray-900">How to apply</span>
+        <span className="text-lg sm:text-xl font-light text-gray-600 flex-shrink-0 ml-2 sm:ml-4">
           {isExpanded ? "−" : "+"}
         </span>
       </button>
@@ -231,8 +231,8 @@ export default function UpcomingCourses() {
   return (
     <section className="mb-16">
       <SectionHeading>Upcoming Courses</SectionHeading>
-      <div className="bg-neutral-50 rounded-lg p-6 md:p-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="bg-neutral-50 rounded-lg p-4 sm:p-6 md:p-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {courses.map((course) => {
             // Use earlyBirdApplicationDeadline, fallback to earlyBirdDeadline for backward compatibility
             const earlyBirdApplicationDeadline = course.earlyBirdApplicationDeadline || course.earlyBirdDeadline;
@@ -248,41 +248,41 @@ export default function UpcomingCourses() {
             return (
               <div
                 key={course.id}
-                className="bg-white border border-gray-200 rounded-lg p-6 space-y-4"
+                className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 space-y-3 sm:space-y-4"
               >
                 {/* Header row with badges */}
                 <div className="flex flex-wrap gap-2 items-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800">
+                  <span className="inline-flex items-center px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium bg-gray-100 text-gray-800">
                     {course.format}
                   </span>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800">
+                  <span className="inline-flex items-center px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium bg-gray-100 text-gray-800">
                     {displayStatus}
                   </span>
                 </div>
 
                 {/* Dates */}
                 <div>
-                  <p className="text-lg font-semibold text-gray-900">
+                  <p className="text-base sm:text-lg font-semibold text-gray-900">
                     {formatDate(course.startDate)} – {formatDate(course.endDate)}
                   </p>
                 </div>
 
                 {/* Schedule */}
                 <div>
-                  <p className="text-gray-700">{course.schedule}</p>
+                  <p className="text-sm sm:text-base text-gray-700">{course.schedule}</p>
                 </div>
 
                 {/* Pricing */}
-                <div className="space-y-2">
-                  <p className="text-gray-900 font-semibold">
+                <div className="space-y-1.5 sm:space-y-2">
+                  <p className="text-sm sm:text-base text-gray-900 font-semibold">
                     Course fee: {formatPrice(course.priceAMD)}
                   </p>
                   {hasEarlyBird && earlyBirdPrice !== null && (
                     <>
-                      <p className="text-primary font-semibold">
+                      <p className="text-sm sm:text-base text-primary font-semibold">
                         Early-bird: {formatPrice(earlyBirdPrice)}
                       </p>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-xs sm:text-sm text-gray-600">
                         Save {formatPrice(saveAmount)}
                       </p>
                     </>
@@ -292,8 +292,8 @@ export default function UpcomingCourses() {
                 {/* Deadlines */}
                 {(course.applicationDeadline || course.paymentDeadline || earlyBirdApplicationDeadline || course.earlyBirdPaymentDeadline) && (
                   <div className="space-y-1 pt-2 border-t border-gray-200">
-                    <p className="text-sm font-medium text-gray-600 mb-2">Deadlines</p>
-                    <div className="space-y-1 text-sm text-gray-600">
+                    <p className="text-xs sm:text-sm font-medium text-gray-600 mb-1.5 sm:mb-2">Deadlines</p>
+                    <div className="space-y-1 text-xs sm:text-sm text-gray-600">
                       {course.applicationDeadline && (
                         <p>Apply by: {formatDate(course.applicationDeadline)}</p>
                       )}

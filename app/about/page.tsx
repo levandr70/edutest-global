@@ -16,9 +16,9 @@ export default function AboutPage() {
       <Container>
         <div className="max-w-4xl mx-auto">
           {/* Page Header */}
-          <ScrollAnimation direction="up" className="text-center mb-12">
-            <h1 className="mb-6">About EduTest Global</h1>
-            <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+          <ScrollAnimation direction="up" className="text-center mb-8 sm:mb-12">
+            <h1 className="mb-4 sm:mb-6">About EduTest Global</h1>
+            <p className="text-base sm:text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto px-4">
               International Testing Center in Yerevan, Armenia. We provide professional administration and candidate support for official international exams.
             </p>
           </ScrollAnimation>
@@ -29,7 +29,7 @@ export default function AboutPage() {
               <SectionHeading>What We Do</SectionHeading>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.2}>
-              <div className="space-y-4 text-neutral-700">
+              <div className="space-y-4 text-sm sm:text-base text-neutral-700">
                 <p>
                   EduTest Global delivers official international exams including TOEFL iBT, GRE, and ACT. We operate as an authorized testing center with secure administration protocols and professional staff.
                 </p>
@@ -49,7 +49,7 @@ export default function AboutPage() {
               <SectionHeading>Our Standards</SectionHeading>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.2}>
-              <ul className="space-y-3 text-neutral-700 list-disc list-inside ml-4">
+              <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-neutral-700 list-disc list-inside ml-4">
                 <li>Security and integrity: Strict protocols to ensure test validity and fairness</li>
                 <li>Professional administration: Trained staff following standardized procedures</li>
                 <li>Candidate support and clear communication: Assistance throughout the testing process</li>
@@ -62,7 +62,7 @@ export default function AboutPage() {
           <ScrollAnimation direction="up" delay={0.2}>
             <section className="bg-neutral-50 p-6 sm:p-8 rounded-lg border border-neutral-200">
             <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-primary">Visit Us</h2>
-            <div className="space-y-4 text-neutral-700">
+            <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-neutral-700">
               <div>
                 <p className="font-semibold mb-1">Address:</p>
                 <p>67/1 Baghramyan Ave., Yerevan, Armenia</p>
@@ -86,7 +86,7 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              <div className="pt-4">
+              <div className="pt-3 sm:pt-4">
                 <Button href="/contact" variant="primary">
                   Contact Us
                 </Button>

@@ -144,59 +144,59 @@ export default function ContactPage() {
             <ScrollAnimation direction="up" delay={0.1}>
               <SectionHeading>What can we help you with?</SectionHeading>
             </ScrollAnimation>
-            <div className="grid md:grid-cols-2 gap-4 mt-6">
+            <div className="grid md:grid-cols-2 gap-3 sm:gap-4 mt-4 sm:mt-6">
               <Link
                 href="/testing/toefl"
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200 hover:border-primary group"
+                className="bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200 hover:border-primary group"
               >
-                <h3 className="text-lg font-semibold mb-2 text-primary group-hover:text-primary-800">
+                <h3 className="text-base sm:text-lg font-semibold mb-1.5 sm:mb-2 text-primary group-hover:text-primary-800">
                   TOEFL iBT
                 </h3>
-                <p className="text-sm text-neutral-600">
+                <p className="text-xs sm:text-sm text-neutral-600">
                   Test of English as a Foreign Language for academic purposes
                 </p>
               </Link>
               <Link
                 href="/testing/gre"
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200 hover:border-primary group"
+                className="bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200 hover:border-primary group"
               >
-                <h3 className="text-lg font-semibold mb-2 text-primary group-hover:text-primary-800">
+                <h3 className="text-base sm:text-lg font-semibold mb-1.5 sm:mb-2 text-primary group-hover:text-primary-800">
                   GRE
                 </h3>
-                <p className="text-sm text-neutral-600">
+                <p className="text-xs sm:text-sm text-neutral-600">
                   Graduate Record Examinations for graduate school admissions
                 </p>
               </Link>
               <Link
                 href="/testing/act"
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200 hover:border-primary group"
+                className="bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200 hover:border-primary group"
               >
-                <h3 className="text-lg font-semibold mb-2 text-primary group-hover:text-primary-800">
+                <h3 className="text-base sm:text-lg font-semibold mb-1.5 sm:mb-2 text-primary group-hover:text-primary-800">
                   ACT
                 </h3>
-                <p className="text-sm text-neutral-600">
+                <p className="text-xs sm:text-sm text-neutral-600">
                   American College Testing for undergraduate admissions
                 </p>
               </Link>
               <Link
                 href="/testing"
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200 hover:border-primary group"
+                className="bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200 hover:border-primary group"
               >
-                <h3 className="text-lg font-semibold mb-2 text-primary group-hover:text-primary-800">
+                <h3 className="text-base sm:text-lg font-semibold mb-1.5 sm:mb-2 text-primary group-hover:text-primary-800">
                   Professional Testing
                 </h3>
-                <p className="text-sm text-neutral-600">
+                <p className="text-xs sm:text-sm text-neutral-600">
                   Certification and licensure exams through leading providers
                 </p>
               </Link>
               <Link
                 href="/celta"
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200 hover:border-primary group md:col-span-2"
+                className="bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200 hover:border-primary group md:col-span-2"
               >
-                <h3 className="text-lg font-semibold mb-2 text-primary group-hover:text-primary-800">
+                <h3 className="text-base sm:text-lg font-semibold mb-1.5 sm:mb-2 text-primary group-hover:text-primary-800">
                   Cambridge CELTA
                 </h3>
-                <p className="text-sm text-neutral-600">
+                <p className="text-xs sm:text-sm text-neutral-600">
                   Internationally recognized English language teaching certification
                 </p>
               </Link>

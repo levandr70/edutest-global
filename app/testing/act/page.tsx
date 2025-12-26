@@ -43,19 +43,19 @@ export default function ACTPage() {
               </div>
             </ScrollAnimation>
 
-            <StaggerAnimation className="grid md:grid-cols-2 gap-6 mb-8" staggerDelay={0.1}>
+            <StaggerAnimation className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8" staggerDelay={0.1}>
               {/* Test Structure & Timing Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Test Structure & Timing</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Test Structure & Timing</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <p className="font-medium text-neutral-900">Four multiple-choice sections:</p>
-                  <ul className="space-y-2 ml-4 list-disc">
+                  <ul className="space-y-1.5 sm:space-y-2 ml-4 list-disc">
                     <li><span className="font-medium">English:</span> 35 minutes</li>
                     <li><span className="font-medium">Mathematics:</span> 50 minutes</li>
                     <li><span className="font-medium">Reading:</span> 40 minutes</li>
                     <li><span className="font-medium">Science:</span> 40 minutes</li>
                   </ul>
-                  <div className="mt-3">
+                  <div className="mt-2 sm:mt-3">
                     <p className="font-medium text-neutral-900">Optional Writing:</p>
                     <p className="ml-4">40 minutes, 1 essay</p>
                   </div>
@@ -63,9 +63,9 @@ export default function ACTPage() {
               </div>
 
               {/* Scores & Reporting Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Scores & Reporting</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Scores & Reporting</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <div>
                     <p className="font-medium text-neutral-900 mb-1">Score Availability:</p>
                     <p>Over 97% of scores are available within a 2–4 week period after the test date.</p>
@@ -78,9 +78,9 @@ export default function ACTPage() {
               </div>
 
               {/* Test Day Essentials Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Test Day Essentials</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Test Day Essentials</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <div>
                     <p className="font-medium text-neutral-900 mb-1">ID Requirements:</p>
                     <p>Bring a valid, government-issued photo ID (passport or national ID).</p>
@@ -97,9 +97,9 @@ export default function ACTPage() {
               </div>
 
               {/* Fees Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Fees</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Fees</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <p>ACT fees vary by location and options. Additional fees may apply (late registration, standby testing, change fee).</p>
                 </div>
               </div>
@@ -251,12 +251,12 @@ export default function ACTPage() {
           </section>
 
           {/* Location & Contact Section */}
-          <section className="bg-neutral-50 p-8 rounded-lg border border-neutral-200">
+          <section className="bg-neutral-50 p-4 sm:p-6 md:p-8 rounded-lg border border-neutral-200">
             <ScrollAnimation direction="up" delay={0.1}>
-              <h2 className="text-2xl font-semibold mb-6 text-primary">Location & Contact</h2>
+              <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-primary">Location & Contact</h2>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.2}>
-              <div className="space-y-4 text-neutral-700">
+              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-neutral-700">
               <div>
                 <p className="font-semibold mb-1">Address:</p>
                 <p>67/1 Baghramyan Ave., Yerevan, Armenia</p>
@@ -280,7 +280,7 @@ export default function ACTPage() {
                   </p>
                 </div>
               </div>
-              <div className="pt-4">
+              <div className="pt-3 sm:pt-4">
                 <Button href="/contact" variant="primary">
                   Contact Us
                 </Button>

@@ -43,28 +43,28 @@ export default function GREPage() {
               </div>
             </ScrollAnimation>
 
-            <StaggerAnimation className="grid md:grid-cols-2 gap-6 mb-8" staggerDelay={0.1}>
+            <StaggerAnimation className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8" staggerDelay={0.1}>
               {/* Test Structure & Timing Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Test Structure & Timing</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Test Structure & Timing</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <p className="font-medium text-neutral-900">Overall test time: about 1 hour 58 minutes</p>
-                  <div className="space-y-2">
+                  <div className="space-y-1.5 sm:space-y-2">
                     <p className="font-medium text-neutral-900">Five sections:</p>
-                    <ul className="space-y-2 ml-4 list-disc">
+                    <ul className="space-y-1.5 sm:space-y-2 ml-4 list-disc">
                       <li><span className="font-medium">Analytical Writing:</span> One "Analyze an Issue" task — 30 minutes</li>
                       <li><span className="font-medium">Verbal Reasoning:</span> Section 1 (12 questions, 18 minutes), Section 2 (15 questions, 23 minutes)</li>
                       <li><span className="font-medium">Quantitative Reasoning:</span> Section 1 (12 questions, 21 minutes), Section 2 (15 questions, 26 minutes)</li>
                     </ul>
                   </div>
-                  <p className="text-xs text-neutral-500 mt-3">Structure effective beginning September 22, 2023</p>
+                  <p className="text-xs text-neutral-500 mt-2 sm:mt-3">Structure effective beginning September 22, 2023</p>
                 </div>
               </div>
 
               {/* Scores & Validity Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Scores & Validity</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Scores & Validity</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <div>
                     <p className="font-medium text-neutral-900 mb-1">Score Availability:</p>
                     <p>Scores are available approximately 8–10 days after the test date.</p>
@@ -77,9 +77,9 @@ export default function GREPage() {
               </div>
 
               {/* Scheduling & Retakes Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Scheduling & Retakes</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Scheduling & Retakes</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <div>
                     <p className="font-medium text-neutral-900 mb-1">Retake Policy:</p>
                     <p>You can take the GRE General Test once every 21 days, up to 5 times within any continuous rolling 12-month period (365 days).</p>
@@ -88,9 +88,9 @@ export default function GREPage() {
               </div>
 
               {/* Fees Card */}
-              <div className="bg-white border border-neutral-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Fees</h3>
-                <div className="space-y-3 text-sm">
+              <div className="bg-white border border-neutral-200 rounded-lg p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-primary">Fees</h3>
+                <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                   <p>ETS lists the GRE General Test fee as $220 for most areas of the world (subject to change).</p>
                   <p className="text-xs text-neutral-500">Effective July 1, 2024; subject to change</p>
                 </div>
@@ -230,12 +230,12 @@ export default function GREPage() {
           </section>
 
           {/* Location & Contact Section */}
-          <section className="bg-neutral-50 p-8 rounded-lg border border-neutral-200">
+          <section className="bg-neutral-50 p-4 sm:p-6 md:p-8 rounded-lg border border-neutral-200">
             <ScrollAnimation direction="up" delay={0.1}>
-              <h2 className="text-2xl font-semibold mb-6 text-primary">Location & Contact</h2>
+              <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-primary">Location & Contact</h2>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.2}>
-              <div className="space-y-4 text-neutral-700">
+              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-neutral-700">
               <div>
                 <p className="font-semibold mb-1">Address:</p>
                 <p>67/1 Baghramyan Ave., Yerevan, Armenia</p>
@@ -259,7 +259,7 @@ export default function GREPage() {
                   </p>
                 </div>
               </div>
-              <div className="pt-4">
+              <div className="pt-3 sm:pt-4">
                 <Button href="/contact" variant="primary">
                   Contact Us
                 </Button>

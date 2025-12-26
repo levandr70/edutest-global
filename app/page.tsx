@@ -90,8 +90,10 @@ export default function Home() {
         <Container>
           <ScrollAnimation direction="fade" duration={0.8} className="text-center max-w-4xl mx-auto relative z-10">
             <ScrollAnimation direction="down" delay={0.2} className="inline-block mb-4">
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-semibold bg-white/20 backdrop-blur-sm border border-white/30">
-                International Testing Center • Yerevan
+              <span className="inline-flex items-center px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-white/20 backdrop-blur-sm border border-white/30">
+                <span className="hidden sm:inline">International Testing Center • </span>
+                <span className="sm:hidden">Testing Center • </span>
+                Yerevan
               </span>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={0.3}>
@@ -168,25 +170,25 @@ export default function Home() {
             {examCards.map((exam) => (
               <div
                 key={exam.name}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200"
+                className="bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200"
               >
-                <h3 className="text-xl font-semibold mb-3 text-primary">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-primary">
                   {exam.name}
                 </h3>
-                <p className="text-sm text-neutral-700 mb-4">
+                <p className="text-xs sm:text-sm text-neutral-700 mb-3 sm:mb-4">
                   {exam.description}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-2">
                   <Link
                     href={exam.href}
-                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
+                    className="inline-flex items-center justify-center px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-white bg-primary hover:bg-primary-800 rounded-lg transition-colors"
                   >
                     Learn More
                   </Link>
                   {exam.secondaryLabel && exam.secondaryHref && (
                     <Link
                       href={exam.secondaryHref}
-                      className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-neutral-700 bg-neutral-100 hover:bg-neutral-200 rounded-lg transition-colors"
+                      className="inline-flex items-center justify-center px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-neutral-700 bg-neutral-100 hover:bg-neutral-200 rounded-lg transition-colors"
                     >
                       {exam.secondaryLabel}
                     </Link>
@@ -265,15 +267,15 @@ export default function Home() {
           <ScrollAnimation direction="up" delay={0.2}>
             <SectionHeading>Why Choose Us</SectionHeading>
           </ScrollAnimation>
-          <StaggerAnimation className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto" staggerDelay={0.15}>
+          <StaggerAnimation className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto px-4" staggerDelay={0.15}>
             {whyChooseUs.map((item) => (
               <div
                 key={item.title}
-                className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200 text-center"
+                className="bg-white p-6 sm:p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200 text-center"
               >
-                <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-3 sm:mb-4">
                   <svg
-                    className="w-8 h-8 text-primary"
+                    className="w-6 h-6 sm:w-8 sm:h-8 text-primary"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -286,10 +288,10 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="mb-4 text-primary text-xl font-semibold">
+                <h3 className="mb-3 sm:mb-4 text-primary text-lg sm:text-xl font-semibold">
                   {item.title}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed">
+                <p className="text-sm sm:text-base text-neutral-600 leading-relaxed">
                   {item.description}
                 </p>
               </div>
