@@ -144,7 +144,7 @@ export default function ContactPage() {
             <ScrollAnimation direction="up" delay={0.1}>
               <SectionHeading>What can we help you with?</SectionHeading>
             </ScrollAnimation>
-            <StaggerAnimation className="grid md:grid-cols-2 gap-4 mt-6" staggerDelay={0.1}>
+            <div className="grid md:grid-cols-2 gap-4 mt-6">
               <Link
                 href="/testing/toefl"
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-neutral-200 hover:border-primary group"
@@ -200,7 +200,7 @@ export default function ContactPage() {
                   Internationally recognized English language teaching certification
                 </p>
               </Link>
-            </StaggerAnimation>
+            </div>
           </div>
 
           {/* Contact Form */}
